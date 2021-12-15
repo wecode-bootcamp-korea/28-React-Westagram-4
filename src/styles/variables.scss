@@ -1,0 +1,22 @@
+.login-footer {
+  position: absolute;
+  bottom: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #8d8d8d;
+  font-size: 14px;
+
+  .footer__tag {
+    a {
+      color: #8d8d8d;
+      text-decoration: none;
+      margin-left: 4px;
+      cursor: pointer;
+    }
+  }
+  .footer__text {
+    margin-top: 10px;
+  }
+}
