@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import Footer from '../../../components/Footer/Footer';
 import './Login.scss';
 
 function Login() {
@@ -23,8 +23,7 @@ function Login() {
               />
               <input
                 className="login-form__password js-password"
-                p
-                laceholder="  비밀번호"
+                placeholder="  비밀번호를 입력하세요"
                 type="password"
               />
               <button
@@ -59,6 +58,7 @@ function Login() {
             <a href="#">가입하기</a>
           </section>
         </article>
+        <Footer />
       </main>
     </div>
   );
