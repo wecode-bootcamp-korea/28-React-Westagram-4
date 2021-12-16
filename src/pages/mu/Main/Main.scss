@@ -1,0 +1,358 @@
+@import 'https://fonts.googleapis.com/css2?family=Lobster&display=swap';
+
+html {
+  font-size: 10px;
+  color: black;
+}
+
+body {
+  background-color: rgb(250, 250, 250);
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+  border-bottom: 1px solid rgb(200, 200, 200);
+
+  header {
+    display: flex;
+    width: 30vw;
+    margin-right: 3rem;
+    font-size: 5rem;
+    background-color: lightcyan;
+
+    i {
+      margin: 1.5rem;
+      padding: 1rem;
+      padding-right: 2.2rem;
+      border-right: 2px solid black;
+      order: -1;
+    }
+  }
+  h1 {
+    margin: 1rem;
+    font-family: 'Lobster', cursive;
+    background-color: lightcoral;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  i {
+    margin: 0.4rem;
+    font-size: 3rem;
+  }
+  nav {
+    @include flex-between;
+    width: 40vw;
+
+    .search {
+      width: 20vw;
+      position: relative;
+
+      form {
+        input {
+          width: 100%;
+          padding: 0.6rem;
+          border: 1px solid rgb(219, 219, 219);
+          border-radius: 5px;
+          background: rgb(240, 240, 240);
+          text-align: center;
+        }
+
+        ul {
+          position: absolute;
+          display: none;
+          top: 3rem;
+          background: rgb(240, 240, 240);
+          border: 1px solid rgb(250, 250, 250);
+          border-radius: 5px;
+
+          li {
+            width: 25rem;
+            font-size: 1.5rem;
+          }
+        }
+      }
+      i {
+        position: absolute;
+        top: 0;
+        left: 8rem;
+        color: rgb(200, 200, 200);
+        font-size: 2rem;
+      }
+    }
+    .menu {
+      @include flex-align-center;
+
+      .profile {
+        position: relative;
+        margin-left: 1.3rem;
+
+        img {
+          width: 3.5rem;
+          height: 3.5rem;
+          border-radius: 50%;
+        }
+
+        ul {
+          position: absolute;
+          border: 1px solid rgb(219, 219, 219);
+          background: rgb(240, 240, 240);
+        }
+      }
+    }
+  }
+}
+.main-wrap {
+  display: flex;
+  justify-content: center;
+
+  .main {
+    width: 35%;
+
+    .feed {
+      border: 1px solid rgb(219, 219, 219);
+      border-radius: 3px;
+
+      .feed-header {
+        @include flex-between;
+        padding: 2rem;
+        text-align: center;
+
+        .feed-profile {
+          @include flex-align-center;
+          width: 50%;
+
+          h3 {
+            font-size: 1.4rem;
+            font-weight: bold;
+          }
+
+          img {
+            display: inline-block;
+            width: 3.5rem;
+            height: 3.5rem;
+            margin-right: 1rem;
+            border: 1px solid rgb(219, 219, 219);
+            border-radius: 50%;
+            order: -1;
+          }
+        }
+        .feed-more {
+          i {
+            color: rgb(190, 190, 190);
+            font-size: 3rem;
+          }
+        }
+      }
+
+      .feed-image {
+        img {
+          display: inline-block;
+          width: 100%;
+        }
+      }
+
+      .feed-wrap {
+        padding: 1.5rem;
+
+        span {
+          font-weight: bold;
+        }
+
+        i {
+          padding: 0.1rem;
+          font-size: 2rem;
+        }
+
+        .feed-icon {
+          display: flex;
+          justify-content: space-between;
+        }
+        .feed-like {
+          @include flex-align-center;
+          margin: 1rem 0;
+
+          img {
+            width: 3.5rem;
+            height: 3.5rem;
+            border: 1px solid rgb(219, 219, 219);
+            border-radius: 50%;
+          }
+        }
+
+        .feed-content {
+          display: flex;
+          margin-bottom: 1rem;
+
+          p {
+            width: 60%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+
+          span {
+            margin-right: 0.7rem;
+          }
+
+          button {
+            color: rgb(205, 205, 205);
+          }
+        }
+
+        .feed-reply {
+          position: relative;
+
+          div {
+            @include flex-align-center;
+
+            i {
+              position: absolute;
+              right: 1px;
+              padding: 1rem;
+              margin: 0;
+              font-size: 1.3rem;
+              order: 10;
+            }
+          }
+
+          span {
+            margin-right: 0.7rem;
+            color: rgb(210, 210, 210);
+            font-weight: 400;
+          }
+
+          > i {
+            position: absolute;
+            top: 0;
+            left: 150px;
+            font-size: 1.5rem;
+            &:hover {
+              color: red;
+            }
+          }
+        }
+      }
+      .feed-reply-form {
+        position: relative;
+
+        input {
+          width: 100%;
+          padding: 1rem;
+          border: none;
+          border-top: 1px solid rgb(219, 219, 219);
+          background: rgb(250, 250, 250);
+        }
+        button {
+          position: absolute;
+          top: 12px;
+          right: 20px;
+          color: rgb(197, 225, 251);
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  aside {
+    width: 25%;
+    margin-left: 3rem;
+
+    p,
+    button {
+      font-weight: bold;
+    }
+    span {
+      color: rgb(190, 190, 190);
+    }
+
+    article {
+      margin: 0 0 1.5rem 1.5rem;
+      padding: 0 0 1.5rem;
+    }
+
+    .myprofile {
+      @include flex-align-center;
+
+      img {
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-right: 1rem;
+        border-radius: 50%;
+      }
+    }
+
+    .aside-box {
+      position: relative;
+      padding: 1.5rem;
+      border: 1px solid rgb(219, 219, 219);
+      border-radius: 3px;
+
+      > h3 {
+        color: rgb(190, 190, 190);
+        font-size: 1.5rem;
+      }
+
+      > button {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+      }
+
+      .story-box {
+        @include flex-align-center;
+        margin-top: 1rem;
+
+        img {
+          width: 3.5rem;
+          height: 3.5rem;
+          margin: 0.2rem 1rem 0.2rem 0.2rem;
+          padding: 1px;
+          border-width: 1px;
+          border-style: solid;
+          border-color: transparent;
+          border-radius: 50%;
+          background-image: linear-gradient(pink, yellow);
+        }
+      }
+      .recommend-box {
+        @include flex-align-center;
+        margin-top: 0.7rem;
+
+        img {
+          width: 3.5rem;
+          height: 3.5rem;
+          margin-right: 1rem;
+          border: 1px solid rgb(219, 219, 219);
+          border-radius: 50%;
+        }
+
+        button {
+          position: absolute;
+          right: 15px;
+          color: rgb(45, 128, 252);
+        }
+
+        span {
+          display: inline-block;
+          width: 30%;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
