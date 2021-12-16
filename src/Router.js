@@ -13,7 +13,11 @@ import Mainq from './pages/q/Main/Main';
 import Loginsangil from './pages/sangil/Login/Login';
 import Mainsangil from './pages/sangil/Main/Main';
 
-import Footer from './components/Footer/Footer';
+import './styles/reset.scss';
+import './styles/common.scss';
+import './styles/variables.scss';
+
+// import Footer from './components/Footer/Footer';
 // import 한 컴포넌트에 대한 경로를 각각 설정해줍니다.
 function Router() {
   return (
@@ -32,7 +36,7 @@ function Router() {
         <Route path="/login-q" element={<Loginq />} />
         <Route path="/main-q" element={<Mainq />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 }
