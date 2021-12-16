@@ -23,35 +23,35 @@ body {
 .header-wrap {
   display: flex;
   justify-content: center;
-  margin-bottom: 5rem;
+  margin-bottom: 5vw;
   border-bottom: 1px solid rgb(200, 200, 200);
 
   header {
     display: flex;
     width: 30vw;
-    margin-right: 3rem;
-    font-size: 5rem;
+    margin-right: 3vw;
+    font-size: 5vw;
     background-color: lightcyan;
 
     i {
-      margin: 1.5rem;
-      padding: 1rem;
-      padding-right: 2.2rem;
+      margin: 1.5vw;
+      padding: 1vw;
+      padding-right: 2.2vw;
       border-right: 2px solid black;
       order: -1;
     }
   }
   h1 {
-    margin: 1rem;
+    margin: 1vw;
     font-family: 'Lobster', cursive;
     background-color: lightcoral;
   }
   h3 {
-    font-size: 1.4rem;
+    font-size: 1.4vw;
   }
   i {
-    margin: 0.4rem;
-    font-size: 3rem;
+    margin: 0.4vw;
+    font-size: 3vw;
   }
   nav {
     @include flex-between;
@@ -63,7 +63,7 @@ body {
 
       form {
         input {
-          width: 100%;
+          width: 90%;
           padding: 0.6rem;
           border: 1px solid rgb(219, 219, 219);
           border-radius: 5px;
@@ -88,7 +88,7 @@ body {
       i {
         position: absolute;
         top: 0;
-        left: 8rem;
+        left: 6rem;
         color: rgb(200, 200, 200);
         font-size: 2rem;
       }
