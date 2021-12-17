@@ -1,3 +1,4 @@
+import { check } from 'prettier';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../../../components/Footer/Footer';
@@ -20,13 +21,21 @@ function Login() {
     setIsPwValid(event.target.value);
   };
 
+  const checkedValid = (id, pw) => {
+    return id.includes('@') && pw.length > 6 ? false : true;
+  };
+
+  const handleEnter = event => {
+    if (checkedValid && event.key === 'Enter') return goToMain();
+  };
+
   return (
     <div className="login">
       <main className="login-main">
         <article className="content-container">
           <section className="login-container">
             <div className="logo">Westagram</div>
-            <form className="login-form">
+            <form className="login-form" onKeyPress={handleEnter}>
               <input
                 onChange={handleIdChange}
                 className="login-form__id js-id"
@@ -40,7 +49,7 @@ function Login() {
                 type="password"
               />
               <button
-                disabled
+                disabled={checkedValid(isIdValid, isPwValid)}
                 onClick={goToMain}
                 className="login-button"
                 type="button"
