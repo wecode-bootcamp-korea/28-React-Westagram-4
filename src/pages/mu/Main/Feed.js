@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import Replys from './Replys';
 import {
   AiOutlineEllipsis,
   AiOutlineHeart,
   AiOutlineMessage,
-  AiOutlineClose,
 } from 'react-icons/ai';
 import { BsBookmark, BsUpload } from 'react-icons/bs';
 
@@ -24,21 +24,21 @@ function Feed() {
     setUserReply('');
   };
 
-  const replyLists = replys.map(reply => (
-    <li className="feed-reply" key={reply.key}>
-      <div>
-        <span>aaa</span>
-        <p>{reply.reply}</p>
-        <i>
-          <AiOutlineHeart />
-        </i>
-      </div>
-      <span className="feed-reply-time">42분전</span>
-      <i>
-        <AiOutlineClose />
-      </i>
-    </li>
-  ));
+  // const replyLists = replys.map(reply => (
+  //   <li className="feed-reply" key={reply.key}>
+  //     <div>
+  //       <span>aaa</span>
+  //       <p>{reply.reply}</p>
+  //       <i>
+  //         <AiOutlineHeart />
+  //       </i>
+  //     </div>
+  //     <span className="feed-reply-time">42분전</span>
+  //     <i>
+  //       <AiOutlineClose />
+  //     </i>
+  //   </li>
+  // ));
 
   return (
     <section className="feed">
@@ -94,7 +94,11 @@ function Feed() {
           </p>
           <button>더 보기</button>
         </div>
-        <ul className="feed-replyList">{replyLists}</ul>
+        <ul className="feed-replyList">
+          {replys.map(reply => (
+            <Replys key={reply.key} reply={reply.reply} />
+          ))}
+        </ul>
       </div>
       <form className="feed-reply-form" onSubmit={replySubmit}>
         {/* <label for="reply"></label> */}
