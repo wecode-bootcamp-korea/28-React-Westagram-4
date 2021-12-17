@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../../../components/Footer/Footer';
 import './Login.scss';
 
 function Login() {
+  const [isIdValid, setIsIdValid] = useState('');
+  const [isPwValid, setIsPwValid] = useState('');
+
   const navigate = useNavigate();
   const goToMain = () => {
     navigate('/main-haesoo');
+  };
+
+  const handleIdChange = event => {
+    setIsIdValid(event.target.value);
+  };
+
+  const handlePwChange = event => {
+    setIsPwValid(event.target.value);
   };
 
   return (
@@ -17,29 +28,25 @@ function Login() {
             <div className="logo">Westagram</div>
             <form className="login-form">
               <input
+                onChange={handleIdChange}
                 className="login-form__id js-id"
                 placeholder="  전화번호, 사용자 이름 또는 이메일"
                 type="form"
               />
               <input
+                onChange={handlePwChange}
                 className="login-form__password js-password"
                 placeholder="  비밀번호를 입력하세요"
                 type="password"
               />
               <button
-                //disabled
+                disabled
                 onClick={goToMain}
                 className="login-button"
                 type="button"
               >
                 로그인
               </button>
-              {/* Link 방식
-               <button disabled className="login-button" type="button">
-                <Link to="/main" style={{ color: "white" }}>
-                  로그인
-                </Link>
-              </button> */}
             </form>
             <p className="login-hide js-valid-id valid-message">
               @ 가 포함된 유효한 이메일을 입력해주세요.
