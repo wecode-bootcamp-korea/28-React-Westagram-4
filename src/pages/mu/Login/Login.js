@@ -17,8 +17,7 @@ function Login() {
   };
 
   const loginValidate = (id, pw) => {
-    const regExpId =
-      /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+    const regExpId = /^[A-Za-z0-9]{5,20}$/;
     const regExpPassword = /^(?=.*\d)(?=.*[a-zA-Z])[0-9a-zA-Z]{5,16}$/;
 
     const validation = regExpId.test(id) && regExpPassword.test(pw);
