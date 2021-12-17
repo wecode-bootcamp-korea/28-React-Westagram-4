@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import {
   AiOutlineEllipsis,
   AiOutlineHeart,
@@ -7,6 +8,38 @@ import {
 import { BsBookmark, BsUpload } from 'react-icons/bs';
 
 function Feed() {
+  const [replys, setReplys] = useState([]);
+  const [userReply, setUserReply] = useState('');
+  const [replyKey, setReplyKey] = useState(0);
+
+  const replySave = e => setUserReply(e.target.value);
+  const replySubmit = e => {
+    e.preventDefault();
+    const nextReplys = replys.concat({
+      key: replyKey,
+      reply: userReply,
+    });
+    setReplys(nextReplys);
+    setReplyKey(replyKey + 1);
+    setUserReply('');
+  };
+
+  const replyLists = replys.map(reply => (
+    <li className="feed-reply" key={reply.key}>
+      <div>
+        <span>aaa</span>
+        <p>{reply.reply}</p>
+        <i>
+          <AiOutlineHeart />
+        </i>
+      </div>
+      <span className="feed-reply-time">42분전</span>
+      <i>
+        <AiOutlineClose />
+      </i>
+    </li>
+  ));
+
   return (
     <section className="feed">
       <div className="feed-header">
@@ -61,38 +94,17 @@ function Feed() {
           </p>
           <button>더 보기</button>
         </div>
-        <ul className="feed-replyList">
-          <li className="feed-reply">
-            <div>
-              <span>aaa</span>
-              <p>안녕하세요.</p>
-              <i>
-                <AiOutlineHeart />
-              </i>
-            </div>
-            <span className="feed-reply-time">42분전</span>
-            <i>
-              <AiOutlineClose />
-            </i>
-          </li>
-          <li className="feed-reply">
-            <div>
-              <span>aaa</span>
-              <p>안녕하세요.</p>
-              <i>
-                <AiOutlineHeart />
-              </i>
-            </div>
-            <span className="feed-reply-time">42분전</span>
-            <i>
-              <AiOutlineClose />
-            </i>
-          </li>
-        </ul>
+        <ul className="feed-replyList">{replyLists}</ul>
       </div>
-      <form className="feed-reply-form">
+      <form className="feed-reply-form" onSubmit={replySubmit}>
         {/* <label for="reply"></label> */}
-        <input id="reply-input" type="text" placeholder="댓글 달기..." />
+        <input
+          id="reply-input"
+          type="text"
+          placeholder="댓글 달기..."
+          value={userReply}
+          onChange={replySave}
+        />
         <button id="reply-button" type="submit">
           게시
         </button>
