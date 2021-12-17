@@ -4,11 +4,22 @@ import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const navigate = useNavigate();
-  const [text, setText] = useState();
 
-  const handleIdInput = event => {
-    setText(event.target.value);
-  };
+  const [userId, setUserId] = useState('');
+  const [userPw, setUserPw] = useState('');
+
+  // const inputId = event => {
+  //   setUserId(event.target.value);
+  // };
+
+  // const handleIdInput = event => {
+  //   setText(event.target.value);
+  // };
+
+  // const validation = () => {
+  //   return userId.includes('@') && userPw.length >= 5 ? false : true;
+  // };
+  // console.log(validation());
 
   const goToMain = () => {
     navigate('/main-q');
@@ -23,15 +34,25 @@ function Login() {
               type="text"
               id="id"
               placeholder="전화번호, 사용자 이름 또는 이메일"
-              onChange={handleIdInput}
+              onChange={e => {
+                setUserId(e.target.value);
+              }}
             />
             <input
               type="password"
               id="password"
               placeholder="비밀번호"
-              onChange={handleIdInput}
+              onChange={e => {
+                setUserPw(e.target.value);
+              }}
             />
-            <button className="loginBtn" onClick={goToMain}>
+            <button
+              className="loginBtn"
+              onClick={goToMain}
+              disabled={
+                userId.includes('@') && userPw.length >= 5 ? false : true
+              }
+            >
               로그인
             </button>
             <footer>비밀번호를 잊으셨나요?</footer>
