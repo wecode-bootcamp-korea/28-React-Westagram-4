@@ -6,7 +6,7 @@ import Footer from '../../../components/Footer/Footer';
 function Login() {
   const [userId, setUserId] = useState('');
   const [userPw, setUserPw] = useState('');
-  const [btnColor, setBtnColor] = useState('');
+  const navigate = useNavigate();
 
   const handleIdInput = e => {
     setUserId(e.target.value);
@@ -25,8 +25,6 @@ function Login() {
 
     return validation;
   };
-
-  const navigate = useNavigate();
 
   const goToMain = () => {
     navigate('/main');
@@ -63,7 +61,7 @@ function Login() {
                 disabled
                 style={{ background: 'red' }}
               >
-                <a href="">로그인</a>
+                <Link to="/">로그인</Link>
               </button>
             )}
           </form>
