@@ -15,6 +15,13 @@ function Login() {
   const handleinput_id = e => setIDhandle(e.target.value);
   const handleinput_pw = e => setPWhandle(e.target.value);
 
+  const [btn_Active, setbtn_Active] = useState(false);
+  const Login_test = () => {
+    return IDhandle.includes('@') && PWhandle.length > 4
+      ? setbtn_Active(true)
+      : setbtn_Active(false);
+  };
+
   return (
     <div>
       <div id="main_container">
@@ -28,6 +35,7 @@ function Login() {
                 id="user_name"
                 placeholder="전화번호, 사용자 이름 또는 이메일"
                 onChange={handleinput_id}
+                onKeyUp={Login_test}
               />
             </p>
             <p className="login_user_password">
@@ -37,10 +45,18 @@ function Login() {
                 id="user_password"
                 placeholder="비밀번호"
                 onChange={handleinput_pw}
+                onKeyUp={Login_test}
               />
             </p>
             <p>
-              <button className="submit_btn">로그인</button>
+              <button
+                // className="submit_btn"
+                className={
+                  btn_Active ? 'submit_btn_active' : 'submit_btn_unactive'
+                }
+              >
+                로그인
+              </button>
             </p>
             <div className="password_find">
               <Link to="/main-sangil">

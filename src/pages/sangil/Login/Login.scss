@@ -32,17 +32,43 @@
   }
 }
 
-.submit_btn {
+// .submit_btn {
+//   width: 268px;
+//   height: 30px;
+//   margin: 13px auto;
+//   background-color: #0095f6;
+//   border: none;
+//   border-radius: 3px;
+//   color: white;
+//   font-size: 14px;
+//   font-weight: bold;
+//   text-align: center; 리엑트 과제2로 인한 비 활성화
+// }
+.submit_btn_active {
+  // @include btn_default;
+  background: #0095f6;
+  color: #fff;
   width: 268px;
   height: 30px;
   margin: 13px auto;
-  background-color: #0095f6;
   border: none;
   border-radius: 3px;
-  color: white;
   font-size: 14px;
-  font-weight: bold;
   text-align: center;
+  font-weight: bold;
+}
+.submit_btn_unactive {
+  // @include btn_default;
+  background-color: #b2dffc;
+  color: #fff;
+  width: 268px;
+  height: 30px;
+  margin: 13px auto;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
 }
 
 .submit_btn {
