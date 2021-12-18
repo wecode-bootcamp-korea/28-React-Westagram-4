@@ -14,48 +14,57 @@ function Main() {
   return (
     <>
       <div className="header-wrap">
-        <header>
-          <h1>westagram</h1>
-          <i>
-            <AiOutlineCamera />
-          </i>
-        </header>
-        <nav>
-          <div className="search">
-            <form className="search-form">
-              <input className="search-input" type="text" placeholder="검색" />
-              <ul className="search-list" />
-            </form>
+        <div>
+          <header>
+            <h1>westagram</h1>
             <i>
-              <AiOutlineSearch />
+              <AiOutlineCamera />
             </i>
-          </div>
-          <div className="menu">
-            <div className="icon">
+          </header>
+          <nav>
+            <div className="search">
+              <form className="search-form">
+                <input
+                  className="search-input"
+                  type="text"
+                  placeholder="검색"
+                />
+                <ul className="search-list" />
+              </form>
               <i>
-                <AiOutlineCompass />
-              </i>
-              <i>
-                <AiOutlineHeart />
-              </i>
-              <i>
-                <AiOutlineUser />
+                <AiOutlineSearch />
               </i>
             </div>
-            <div className="profile">
-              <img alt="profile" src="/images/mu/profile03.jpg" />
-              {/* <ul className="profile-list">
+            <div className="menu">
+              <div className="icon">
+                <i>
+                  <AiOutlineCompass />
+                </i>
+                <i>
+                  <AiOutlineHeart />
+                </i>
+                <i>
+                  <AiOutlineUser />
+                </i>
+              </div>
+              <div className="profile">
+                <img alt="profile" src="/images/mu/profile03.jpg" />
+                {/* <ul className="profile-list">
                 <li>My</li>
                 <li>Post</li>
                 <li>Follow</li>
                 <li>Setting</li>
               </ul> */}
+              </div>
             </div>
-          </div>
-        </nav>
+          </nav>
+        </div>
       </div>
       <div className="main-wrap">
         <main className="main">
+          <Feed />
+          <Feed />
+          <Feed />
           <Feed />
         </main>
         <Aside />

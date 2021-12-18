@@ -21,93 +21,101 @@ body {
 }
 
 .header-wrap {
+  position: fixed;
   display: flex;
   justify-content: center;
-  margin-bottom: 5vw;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background: rgb(245, 245, 245);
   border-bottom: 1px solid rgb(200, 200, 200);
 
-  header {
+  div {
     display: flex;
-    width: 30vw;
-    margin-right: 3vw;
-    font-size: 5vw;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 975px;
 
-    i {
-      margin: 1.5vw;
-      padding: 1vw;
-      padding-right: 2.2vw;
-      border-right: 2px solid black;
-      order: -1;
-    }
-  }
-  h1 {
-    margin: 1vw;
-    font-family: 'Lobster', cursive;
-  }
-  h3 {
-    font-size: 1.4vw;
-  }
-  i {
-    margin: 0.4vw;
-    font-size: 3vw;
-  }
-  nav {
-    @include flex-between;
-    width: 40vw;
-
-    .search {
-      width: 20vw;
-      position: relative;
-
-      form {
-        input {
-          width: 90%;
-          padding: 0.6rem;
-          border: 1px solid rgb(219, 219, 219);
-          border-radius: 5px;
-          background: rgb(240, 240, 240);
-          text-align: center;
-        }
-
-        ul {
-          position: absolute;
-          display: none;
-          top: 3rem;
-          background: rgb(240, 240, 240);
-          border: 1px solid rgb(250, 250, 250);
-          border-radius: 5px;
-
-          li {
-            width: 25rem;
-            font-size: 1.5rem;
-          }
-        }
-      }
-      i {
-        position: absolute;
-        top: 0;
-        left: 6rem;
-        color: rgb(200, 200, 200);
-        font-size: 2rem;
-      }
-    }
-    .menu {
+    header {
       @include flex-align-center;
 
-      .profile {
+      i {
+        padding-right: 10px;
+        border-right: 2px solid black;
+        order: -1;
+      }
+    }
+    h1 {
+      font-size: 37px;
+      padding-bottom: 8px;
+      font-family: 'Lobster', cursive;
+    }
+    h3 {
+      font-size: 1.4vw;
+    }
+    i {
+      margin-right: 10px;
+      font-size: 24px;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .search {
         position: relative;
-        margin-left: 1.3rem;
+        margin-right: 10vw;
 
-        img {
-          width: 3.5rem;
-          height: 3.5rem;
-          border-radius: 50%;
+        form {
+          input {
+            width: 20vw;
+            padding: 0.6rem;
+            border: 1px solid rgb(219, 219, 219);
+            border-radius: 5px;
+            background: rgb(254, 254, 254);
+            text-align: center;
+          }
+
+          ul {
+            position: absolute;
+            display: none;
+            top: 3rem;
+            background: rgb(240, 240, 240);
+            border: 1px solid rgb(250, 250, 250);
+            border-radius: 5px;
+
+            li {
+              width: 25rem;
+              font-size: 1.5rem;
+            }
+          }
         }
-
-        ul {
+        i {
           position: absolute;
-          border: 1px solid rgb(219, 219, 219);
-          background: rgb(240, 240, 240);
+          top: 7px;
+          left: 6rem;
+          color: rgb(200, 200, 200);
+          font-size: 24px;
+        }
+      }
+      .menu {
+        display: flex;
+        justify-content: space-between;
+        .profile {
+          margin-left: 1.3rem;
+
+          img {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+          }
+
+          ul {
+            position: absolute;
+            border: 1px solid rgb(219, 219, 219);
+            background: rgb(240, 240, 240);
+          }
         }
       }
     }
@@ -116,17 +124,20 @@ body {
 .main-wrap {
   display: flex;
   justify-content: center;
+  padding-top: 100px;
 
   .main {
-    width: 35%;
-
+    width: 100%;
+    max-width: 614px;
+    margin-right: 25%;
     .feed {
+      margin: 24px;
       border: 1px solid rgb(219, 219, 219);
       border-radius: 3px;
 
       .feed-header {
         @include flex-between;
-        padding: 2rem;
+        padding: 14px;
         text-align: center;
 
         .feed-profile {
@@ -134,14 +145,14 @@ body {
           width: 50%;
 
           h3 {
-            font-size: 1.4rem;
+            font-size: 14px;
             font-weight: bold;
           }
 
           img {
             display: inline-block;
-            width: 3.5rem;
-            height: 3.5rem;
+            width: 32px;
+            height: 32px;
             margin-right: 1rem;
             border: 1px solid rgb(219, 219, 219);
             border-radius: 50%;
@@ -151,7 +162,7 @@ body {
         .feed-more {
           i {
             color: rgb(190, 190, 190);
-            font-size: 3rem;
+            font-size: 24px;
           }
         }
       }
@@ -160,11 +171,12 @@ body {
         img {
           display: inline-block;
           width: 100%;
+          height: 100%;
         }
       }
 
       .feed-wrap {
-        padding: 1.5rem;
+        padding: 14px;
 
         span {
           font-weight: bold;
@@ -172,7 +184,7 @@ body {
 
         i {
           padding: 0.1rem;
-          font-size: 2rem;
+          font-size: 24px;
         }
 
         .feed-icon {
@@ -184,8 +196,9 @@ body {
           margin: 1rem 0;
 
           img {
-            width: 3.5rem;
-            height: 3.5rem;
+            width: 32px;
+            height: 32px;
+            margin-right: 7px;
             border: 1px solid rgb(219, 219, 219);
             border-radius: 50%;
           }
@@ -222,7 +235,7 @@ body {
               right: 1px;
               padding: 1rem;
               margin: 0;
-              font-size: 1.3rem;
+              font-size: 14px;
               order: 10;
             }
           }
@@ -237,7 +250,7 @@ body {
             position: absolute;
             top: 0;
             left: 150px;
-            font-size: 1.5rem;
+            font-size: 14px;
             &:hover {
               color: red;
             }
@@ -249,7 +262,7 @@ body {
 
         input {
           width: 100%;
-          padding: 1rem;
+          padding: 14px;
           border: none;
           border-top: 1px solid rgb(219, 219, 219);
           background: rgb(250, 250, 250);
@@ -258,15 +271,20 @@ body {
           position: absolute;
           top: 12px;
           right: 20px;
-          color: rgb(197, 225, 251);
-          font-size: 1.2rem;
+          color: rgb(0, 149, 246);
+          font-size: 14px;
+          font-weight: 600;
+          opacity: 0.3;
         }
       }
     }
   }
   aside {
-    width: 25%;
-    margin-left: 3rem;
+    position: fixed;
+    top: 100px;
+    right: 20%;
+    width: 20vw;
+    margin: 24px;
 
     p,
     button {
@@ -285,8 +303,8 @@ body {
       @include flex-align-center;
 
       img {
-        width: 3.5rem;
-        height: 3.5rem;
+        width: 56px;
+        height: 56px;
         margin-right: 1rem;
         border-radius: 50%;
       }
