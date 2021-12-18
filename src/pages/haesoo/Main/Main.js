@@ -1,9 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Comment from './Comment/Comment';
 import './Main.scss';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 function Main() {
+  const [commentInput, setCommentInput] = useState('');
+  const [comments, setComment] = useState([]);
+
+  const handleChange = event => {
+    setCommentInput(event.target.value);
+  };
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    setComment(
+      comments.concat({
+        user: 'haesoo',
+        text: commentInput,
+      })
+    );
+    setCommentInput('');
+  };
+
   return (
     <div className="main">
       <nav className="navigation">
@@ -168,19 +187,19 @@ function Main() {
                 </div>
               </div>
             </div>
-            <div className="feed-comment__add js-feed-comment"></div>
-            <div className="feed-comment js-comment-container">
-              <div className="feed-comment__left">
+            <Comment className="feed-comment__add" comment={comments} />
+            <div className="feed-comment">
+              <form onSubmit={handleSubmit} className="feed-comment__left">
                 <i className="far fa-smile"></i>
                 <input
-                  className="comment__input js-comment-input"
+                  onChange={handleChange}
+                  value={commentInput}
+                  className="comment__input "
                   placeholder="댓글 달기..."
                   type="text"
                 />
-              </div>
-              <button className="feed-comment__button js-comment-button">
-                게시
-              </button>
+                <button className="feed-comment__button">게시</button>
+              </form>
             </div>
           </div>
         </section>
