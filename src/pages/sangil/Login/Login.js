@@ -1,27 +1,27 @@
 // 항상 시작전에 git checkout feature/si 실시하고 확인할것
 import React, { useState } from 'react';
-import { Link, Route, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../Login/Login.scss';
-
 import Footer from '../../../components/Footer/Footer.js';
 function Login() {
-  const navigate_test = useNavigate();
-  const navigate_btn_test = () => {
-    navigate_test('/main-sangil');
-  };
-
+  // 미션1 사용자 입력 데이터 저장 시작
   const [IDhandle, setIDhandle] = useState('');
   const [PWhandle, setPWhandle] = useState('');
   const handleinput_id = e => setIDhandle(e.target.value);
   const handleinput_pw = e => setPWhandle(e.target.value);
-
-  const [btn_Active, setbtn_Active] = useState(false);
-  const Login_test = () => {
+  // 미션1 사용자 입력 데이터 저장 완료
+  // 미션2 로그인 버튼 활성화 관련 부분 시작
+  const [Login_btn_Active, setLogin_btn_Active] = useState(false);
+  // useState(false)로 인해 기본적으로 로그인 버튼을 비활성화함.
+  const Login_btn_active_test = () => {
     return IDhandle.includes('@') && PWhandle.length > 4
-      ? setbtn_Active(true)
-      : setbtn_Active(false);
+      ? // Login_btn_active_test함수를 실행될경우 IDhandle + PWhandle함수에 걸린 조건을 만족하는지 확인
+        setLogin_btn_Active(true)
+      : // IDhandle + PWhandle가 모두 참일 경우 Login_btn_Active를 활성화
+        setLogin_btn_Active(false);
+    // 위의 조건을 만족하지 못할경우 버튼을 활성화 하지 않음.
   };
-
+  // 미션2 로그인 버튼 활성화 부분 완료
   return (
     <div>
       <div id="main_container">
@@ -34,8 +34,8 @@ function Login() {
                 className="input_login"
                 id="user_name"
                 placeholder="전화번호, 사용자 이름 또는 이메일"
-                onChange={handleinput_id}
-                onKeyUp={Login_test}
+                onChange={handleinput_id} // 미션1 관련 부분
+                onKeyUp={Login_btn_active_test} // 미션2 관련 부분 keyup 이벤트 발생시 Login_btn_active_test함수 호출
               />
             </p>
             <p className="login_user_password">
@@ -44,15 +44,16 @@ function Login() {
                 className="input_login"
                 id="user_password"
                 placeholder="비밀번호"
-                onChange={handleinput_pw}
-                onKeyUp={Login_test}
+                onChange={handleinput_pw} // 미션1 관련 부분
+                onKeyUp={Login_btn_active_test} // 미션2 관련 부분임 , keyup 이벤트 발생시 Login_btn_active_test함수 호출
               />
             </p>
             <p>
               <button
-                // className="submit_btn"
                 className={
-                  btn_Active ? 'submit_btn_active' : 'submit_btn_unactive'
+                  // 미션2 관련 삼항연산자
+                  Login_btn_Active ? 'submit_btn_active' : 'submit_btn_unactive'
+                  //Login_btn_Active가 참일 경우 submit_btn_active를 활성화 아닐경우 submit_btn_unactive 실행
                 }
               >
                 로그인
@@ -68,10 +69,7 @@ function Login() {
       </div>
       <div className="insta_join">
         <div className="insta_join_test">
-          <Link to="/login-sangil">
-            {' '}
-            {/* <p className="insta_member">계정이 없으신가요? 가입하기</p> */}
-          </Link>
+          <Link to="/login-sangil" />
         </div>
 
         <Footer />

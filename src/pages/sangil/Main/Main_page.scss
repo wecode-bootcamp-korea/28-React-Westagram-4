@@ -9,12 +9,12 @@
     height: 500px;
     position: relative;
   }
-}
+} // 메인 컨텐츠 수정부분
 .contents {
   position: absolute;
   left: 160px;
   width: 509px;
-  height: 526px;
+  height: 650px;
   border: 1px solid rgba(0, 0, 0, 0.09);
   border-radius: 3px;
   .sprite_more_icon {
@@ -42,8 +42,9 @@
     padding: 10px 20px;
   }
   .likes {
-    padding: 5px 20px;
+    padding: 1px 20px;
     color: #262626;
+    font-size: small;
   }
   .comment_container {
     display: flex;
@@ -82,31 +83,35 @@
       display: flex;
     }
   }
-  .timer {
-    font-size: 10px;
-    letter-spacing: 0.2px;
-    color: #999;
-    padding: 10px 20px;
-    bottom: 20px;
-  }
+
   .comment_field {
     min-height: 51px;
-    margin-top: 5px;
-    position: relative;
+    margin-top: 90px;
+
     color: #999;
-    border: 1px solid rgba(0, 0, 0, 0.09);
+    // border: 1px solid rgba(0, 0, 0, 0.09);
     .comment_test {
       width: 100%;
-      height: 56px;
+      height: 39px;
       border: none;
       outline: none;
       background: transparent;
       margin-left: 13px;
     }
+
     .upload_btn_m_text {
       position: absolute;
       right: 15px;
-      bottom: 17px;
+      bottom: 40px;
+      color: #0095f6;
     }
   }
+}
+.timer {
+  font-size: 10px;
+  letter-spacing: 0.2px;
+  color: #999;
+}
+.comment_text_test {
+  font-size: small;
 }

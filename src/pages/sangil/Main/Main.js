@@ -1,10 +1,11 @@
 // 항상 시작전에 git checkout feature/si 실시하고 확인할것
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, Route, useNavigate } from 'react-router-dom';
 import 이미지 from '../../../assets/images/profile_si.png';
 import Main_page from './Main_page';
 import Nav from './Nav';
 import '../Main/Main.scss';
+
 function Main() {
   return (
     <div>
@@ -78,7 +79,7 @@ function Main() {
               <div className="time">회원님을 팔로우합니다.</div>
             </div>
             <div className="follows">
-              {/* <Link to="/login-sangil">팔로우</Link> */}
+              <Link to="/login-sangil">팔로우</Link>
             </div>
           </div>
         </article>

@@ -1,6 +1,6 @@
 // 항상 시작전에 git checkout feature/si 실시하고 확인할것
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import '../Main/Nav.scss';
 import '../Main/Main.scss';
 
@@ -23,7 +23,9 @@ function Nav() {
               </div>
             </div>
             <div className="right_icons">
-              <div className="compass_icon" />
+              <Link to="/login-sangil">
+                <div className="compass_icon" />
+              </Link>
               <div className="heart_icon_outline" />
               <div className="user_icon_profile" />
             </div>
