@@ -1,44 +1,39 @@
-import React, { useState } from 'react';
-import Replys from './Replys';
+import React, { useState, useEffect } from 'react';
 import {
   AiOutlineEllipsis,
   AiOutlineHeart,
   AiOutlineMessage,
 } from 'react-icons/ai';
 import { BsBookmark, BsUpload } from 'react-icons/bs';
+import CommentsList from './CommentsList';
 
 function Feed() {
-  const [replys, setReplys] = useState([]);
-  const [userReply, setUserReply] = useState('');
-  const [replyKey, setReplyKey] = useState(0);
+  const [comments, setComments] = useState([]);
+  const [commentKey, setCommentKey] = useState(100);
+  const [userName, setUserName] = useState('abc');
+  const [userComment, setUserComment] = useState('');
 
-  const replySave = e => setUserReply(e.target.value);
-  const replySubmit = e => {
+  const commentSave = e => setUserComment(e.target.value);
+  const commentSubmit = e => {
     e.preventDefault();
-    const nextReplys = replys.concat({
-      key: replyKey,
-      reply: userReply,
+    setCommentKey(commentKey + 1);
+    setUserName(userName + 'c');
+    const nextComments = comments.concat({
+      id: commentKey,
+      userName: userName,
+      comment: userComment,
     });
-    setReplys(nextReplys);
-    setReplyKey(replyKey + 1);
-    setUserReply('');
+    setComments(nextComments);
+    setUserComment('');
   };
 
-  // const replyLists = replys.map(reply => (
-  //   <li className="feed-reply" key={reply.key}>
-  //     <div>
-  //       <span>aaa</span>
-  //       <p>{reply.reply}</p>
-  //       <i>
-  //         <AiOutlineHeart />
-  //       </i>
-  //     </div>
-  //     <span className="feed-reply-time">42분전</span>
-  //     <i>
-  //       <AiOutlineClose />
-  //     </i>
-  //   </li>
-  // ));
+  useEffect(() => {
+    fetch('http://localhost:3000/data/commentData.json')
+      .then(res => res.json())
+      .then(data => {
+        setComments(data);
+      });
+  }, []);
 
   return (
     <section className="feed">
@@ -94,22 +89,18 @@ function Feed() {
           </p>
           <button>더 보기</button>
         </div>
-        <ul className="feed-replyList">
-          {replys.map(reply => (
-            <Replys key={reply.key} reply={reply.reply} />
-          ))}
-        </ul>
+        <CommentsList comments={comments} />
       </div>
-      <form className="feed-reply-form" onSubmit={replySubmit}>
+      <form className="feed-comment-form" onSubmit={commentSubmit}>
         {/* <label for="reply"></label> */}
         <input
-          id="reply-input"
+          id="comment-input"
           type="text"
           placeholder="댓글 달기..."
-          value={userReply}
-          onChange={replySave}
+          value={userComment}
+          onChange={commentSave}
         />
-        <button id="reply-button" type="submit">
+        <button id="comment-button" type="submit">
           게시
         </button>
       </form>

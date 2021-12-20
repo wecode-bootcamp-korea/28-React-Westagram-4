@@ -63,9 +63,6 @@ function Main() {
       <div className="main-wrap">
         <main className="main">
           <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
         </main>
         <Aside />
       </div>

@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "userName": "hay",
+    "profileImg": "",
+    "feedImg": "",
+    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "comments": [
+      {
+        "id": 1,
+        "userName": "wecode",
+        "comment": "Welcome to world best coding bootcamp!",
+        "isLiked": true
+      },
+      {
+        "id": 2,
+        "userName": "joonsikyang",
+        "comment": "Hi there.",
+        "isLiked": false
+      },
+      {
+        "id": 3,
+        "userName": "jayPark",
+        "comment": "Hey.",
+        "isLiked": false
+      },
+      {
+        "id": 4,
+        "userName": "manuk",
+        "comment": "Hiiiiiiiiii",
+        "isLiked": true
+      },
+      {
+        "id": 5,
+        "userName": "manukkkkkk",
+        "comment": "Welcome ~!",
+        "isLiked": true
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "userName": "nlid",
+    "profileImg": "",
+    "feedImg": "",
+    "content": "orem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "comments": [
+      {
+        "id": 1,
+        "userName": "wecode",
+        "comment": "Welcome to world best coding bootcamp!",
+        "isLiked": true
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "userName": "123991d",
+    "profileImg": "",
+    "feedImg": "",
+    "content": "orem Ipsum is simply dummy text typesetting industry.",
+    "comments": [
+      {
+        "id": 1,
+        "userName": "wecode",
+        "comment": "Welcome to world best coding bootcamp!",
+        "isLiked": true
+      },
+      {
+        "id": 5,
+        "userName": "manukkkkkk",
+        "comment": "Welcome ~!",
+        "isLiked": true
+      }
+    ]
+  }
+]
