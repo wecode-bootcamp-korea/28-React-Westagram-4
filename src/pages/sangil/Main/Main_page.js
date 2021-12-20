@@ -6,17 +6,18 @@ import Component_comment from './Component_comment';
 function Main_page() {
   // 메인페이지 댓글 관련 시작부분
   const [댓글아이디값, 댓글아이디값변경] = useState('');
-  const [컨텐츠값, 컨텐츠값변경] = useState('');
-  const [댓글배열저장, 댓글배열저장변경] = useState([]);
-  const [검사, 검사변경] = useState(false);
+  const [댓글, 댓글변경] = useState('');
+  const [댓글배열, 댓글배열변경] = useState([]);
+  const [게시버튼활성화, 게시버튼활성화변경] = useState(false);
 
   const comment_btn_plus = e => {
     e.preventDefault();
-    const comment_Arr_test = [...댓글배열저장];
-    comment_Arr_test.push(컨텐츠값);
-    댓글배열저장변경(comment_Arr_test);
-    댓글아이디값변경('');
+    const comment_Arr = [...댓글배열];
+    comment_Arr.push(댓글);
+    댓글배열변경(comment_Arr);
+    // 댓글아이디값변경('');
   };
+
   // 메인페이지 댓글 관련 일부 완료 부분
 
   return (
@@ -64,7 +65,7 @@ function Main_page() {
                   <p className="comment_text_test">댓글 테스트 진행중</p>
                 </div>
                 {/* 댓글 관련 map반복문 + 컴포넌트 부분 */}
-                {댓글배열저장.map((item, i) => {
+                {댓글배열.map((item, i) => {
                   return (
                     <Component_comment
                       댓글아이디값={댓글아이디값}
@@ -83,18 +84,19 @@ function Main_page() {
                 placeholder="댓글달기..."
                 // 댓글 관련 클릭시 이벤트 진행부분
                 onChange={event => {
-                  컨텐츠값변경(event.target.value);
+                  댓글변경(event.target.value);
                 }}
                 onKeyUp={event =>
                   event.target.value.length > 0
-                    ? 검사변경(true)
-                    : 검사변경(false)
+                    ? 게시버튼활성화변경(true)
+                    : 게시버튼활성화변경(false)
                 }
               />
               <button
                 className="upload_btn_m_text"
-                disabled={검사 ? false : true}
+                disabled={게시버튼활성화 ? false : true}
                 onClick={comment_btn_plus}
+
                 // 댓글 관련 클릭시 이벤트 완료 부분
               >
                 게시

@@ -1,6 +1,6 @@
 // 항상 시작전에 git checkout feature/si 실시하고 확인할것
-import React, { useState } from 'react';
-import { Link, Route, useNavigate } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import 이미지 from '../../../assets/images/profile_si.png';
 import Main_page from './Main_page';
 import Nav from './Nav';
