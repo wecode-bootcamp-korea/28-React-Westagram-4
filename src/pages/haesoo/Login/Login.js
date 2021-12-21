@@ -1,4 +1,3 @@
-import { check } from 'prettier';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../../../components/Footer/Footer';
@@ -66,12 +65,12 @@ function Login() {
             <p>또는</p>
             <button className="facebook-button">Facebook으로 로그인</button>
             <section className="find-password-container">
-              <a href="#">비밀번호를 잊으셨나요?</a>
+              <p>비밀번호를 잊으셨나요?</p>
             </section>
           </section>
           <section className="sign-container">
             <p>계정이 없으신가요?</p>
-            <a href="#">가입하기</a>
+            <span>가입하기</span>
           </section>
         </article>
         <Footer />
