@@ -2,15 +2,15 @@ import React from 'react';
 import './AddComment.scss';
 
 export default function AddComment(props) {
-  const commentData = props.commentDataList;
-  const newComments = props.comments;
+  const { commentDataList } = props;
+  const { comments } = props;
 
-  const commentList = [...commentData];
+  const commentList = [...commentDataList];
 
-  if (newComments.length) {
-    newComments.forEach(newComment => {
-      commentList.push(newComment);
-      newComment.id = commentList.length;
+  if (comments.length) {
+    comments.forEach(comment => {
+      commentList.push(comment);
+      comment.id = commentList.length;
     });
   }
 
