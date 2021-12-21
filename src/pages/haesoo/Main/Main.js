@@ -12,14 +12,7 @@ function Main() {
       <nav className="navigation">
         <p>Westagram</p>
         <div className="js-navigation navigation__search">
-          {/* <FontAwesomeIcon
-            icon={faSearch}
-            className="fa-search"
-          ></FontAwesomeIcon> */}
           <input className="js-search-input" placeholder="검색" />
-          {/* <div className="search-container main-hide">
-            <ul className="search-list"></ul>
-          </div> */}
         </div>
         <div className="navigation__icons">
           <img
