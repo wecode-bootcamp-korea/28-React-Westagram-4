@@ -17,7 +17,8 @@ export default function Comment() {
   }, []);
 
   const handleChange = event => {
-    setCommentInput(event.target.value);
+    const { value } = event.target;
+    setCommentInput(value);
   };
 
   const handleSubmit = event => {
