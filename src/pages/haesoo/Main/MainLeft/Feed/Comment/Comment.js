@@ -42,7 +42,7 @@ export default function Comment() {
       />
       <div className="feed-comment">
         <form onSubmit={handleSubmit} className="feed-comment__left">
-          <i className="far fa-smile"></i>
+          <i className="far fa-smile" />
           <input
             onChange={handleChange}
             value={commentInput}
