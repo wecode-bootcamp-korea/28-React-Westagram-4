@@ -27,8 +27,8 @@ function Main() {
             <div className="more">모두 보기</div>
           </header>
           <div className="scroll_inner">
-            <div class="scroll_userlist">
-              <div class="profile_small_img">
+            <div className="scroll_userlist">
+              <div className="profile_small_img">
                 <img src={이미지} alt="프로필이미지" />
               </div>
               <div className="detail">

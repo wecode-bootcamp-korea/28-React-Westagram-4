@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Component_comment from './Component_comment';
+
 import 이미지 from '../../../assets/images/profile_si.png';
 import '../Main/Main_page.scss';
+
 function Main_page() {
   const [댓글, 댓글변경] = useState('');
   const [댓글배열, 댓글배열변경] = useState([]);
@@ -57,7 +59,7 @@ function Main_page() {
                 <div className="comment_detail">
                   <p className="comment_text_test">댓글 테스트 진행중</p>
                 </div>
-                {/* 댓글 관련 map반복문 + 컴포넌트 부분 */}
+
                 {댓글배열.map((item, i) => {
                   return <Component_comment item={item} key={i} />;
                 })}
