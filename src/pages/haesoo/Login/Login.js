@@ -56,12 +56,6 @@ function Login() {
                 로그인
               </button>
             </form>
-            <p className="login-hide js-valid-id valid-message">
-              @ 가 포함된 유효한 이메일을 입력해주세요.
-            </p>
-            <p className="login-hide js-valid-password valid-message">
-              비밀번호를 12자리 이상 입력해주세요.
-            </p>
             <p>또는</p>
             <button className="facebook-button">Facebook으로 로그인</button>
             <section className="find-password-container">
