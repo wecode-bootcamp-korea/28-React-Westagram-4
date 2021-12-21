@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "userName": "__jeongjaehyun",
+    "content": "1등",
+    "isLiked": "true"
+  },
+  {
+    "id": 2,
+    "userName": "bumikeem",
+    "content": "제주제주제주",
+    "isLiked": "false"
+  },
+  {
+    "id": 3,
+    "userName": "ninicho",
+    "content": "이야 ~",
+    "isLiked": "false"
+  }
+]
