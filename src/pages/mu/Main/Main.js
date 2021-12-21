@@ -13,24 +13,6 @@ import Feed from './Feed';
 import Aside from './Aside/Aside';
 
 function Main() {
-  // const [feeds, setFeeds] = useState([]);
-  // const [feed, setFeed] = useState([]);
-
-  // const update = () => {
-  //   const updateFeeds = feeds.filter(changeFeed => changeFeed.id !== feed.id);
-  //   console.log(feeds);
-  //   console.log(updateFeeds);
-  //   console.log(feed);
-  // };
-
-  // useEffect(() => {
-  //   fetch('http://localhost:3000/data/feedData.json')
-  //     .then(res => res.json())
-  //     .then(data => {
-  //       setFeeds(data);
-  //     });
-  // }, []);
-
   return (
     <>
       <div className="header-wrap">

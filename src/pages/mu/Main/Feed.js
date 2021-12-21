@@ -92,7 +92,6 @@ function Feed() {
         <CommentsList comments={comments} />
       </div>
       <form className="feed-comment-form" onSubmit={commentSubmit}>
-        {/* <label for="reply"></label> */}
         <input
           id="comment-input"
           type="text"
