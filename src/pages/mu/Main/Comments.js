@@ -12,7 +12,9 @@ function Comments({ comment, name }) {
         </i>
       </div>
       <span className="feed-comment-time">42분전</span>
-      <i>{/* <AiOutlineClose /> */}</i>
+      <i>
+        <AiOutlineClose />
+      </i>
     </li>
   );
 }

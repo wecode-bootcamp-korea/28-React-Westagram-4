@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import {
   AiOutlineSearch,
   AiOutlineCompass,
@@ -7,10 +8,29 @@ import {
 } from 'react-icons/ai';
 
 import './Main.scss';
+// import Feeds from './Feeds';
 import Feed from './Feed';
 import Aside from './Aside/Aside';
 
 function Main() {
+  // const [feeds, setFeeds] = useState([]);
+  // const [feed, setFeed] = useState([]);
+
+  // const update = () => {
+  //   const updateFeeds = feeds.filter(changeFeed => changeFeed.id !== feed.id);
+  //   console.log(feeds);
+  //   console.log(updateFeeds);
+  //   console.log(feed);
+  // };
+
+  // useEffect(() => {
+  //   fetch('http://localhost:3000/data/feedData.json')
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       setFeeds(data);
+  //     });
+  // }, []);
+
   return (
     <>
       <div className="header-wrap">
@@ -49,12 +69,6 @@ function Main() {
               </div>
               <div className="profile">
                 <img alt="profile" src="/images/mu/profile03.jpg" />
-                {/* <ul className="profile-list">
-                <li>My</li>
-                <li>Post</li>
-                <li>Follow</li>
-                <li>Setting</li>
-              </ul> */}
               </div>
             </div>
           </nav>
@@ -62,7 +76,17 @@ function Main() {
       </div>
       <div className="main-wrap">
         <main className="main">
-          <Feed />
+          <ul>
+            <Feed />
+            {/* {feeds.map(fee => (
+              <Feeds
+                key={fee.id}
+                feed={fee}
+                setFeed={setFeed}
+                update={update}
+              />
+            ))} */}
+          </ul>
         </main>
         <Aside />
       </div>
