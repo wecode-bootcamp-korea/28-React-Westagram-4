@@ -1,8 +1,7 @@
 // 항상 시작전에 git checkout feature/si 실시하고 확인할것
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../Main/Nav.scss';
-import '../Main/Main.scss';
 
 function Nav() {
   return (
@@ -17,9 +16,7 @@ function Nav() {
             <div class="search_box">
               <input type="text" placeholder="검색" id="search-field" />
               <div className="search_field_small">
-                <span className="small_search_icon">
-                  {/* <span>검색</span> */}
-                </span>
+                <span className="small_search_icon" />
               </div>
             </div>
             <div className="right_icons">

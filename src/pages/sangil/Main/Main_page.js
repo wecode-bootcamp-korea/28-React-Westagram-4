@@ -1,24 +1,17 @@
-import React, { useState } from 'react';
-import '../Main/Main_page.scss';
-import 이미지 from '../../../assets/images/profile_si.png';
+import React, { useState, useEffect } from 'react';
 import Component_comment from './Component_comment';
-
+import 이미지 from '../../../assets/images/profile_si.png';
+import '../Main/Main_page.scss';
 function Main_page() {
-  // 메인페이지 댓글 관련 시작부분
-  const [댓글아이디값, 댓글아이디값변경] = useState('');
   const [댓글, 댓글변경] = useState('');
   const [댓글배열, 댓글배열변경] = useState([]);
   const [게시버튼활성화, 게시버튼활성화변경] = useState(false);
 
   const comment_btn_plus = e => {
-    e.preventDefault();
     const comment_Arr = [...댓글배열];
     comment_Arr.push(댓글);
     댓글배열변경(comment_Arr);
-    // 댓글아이디값변경('');
   };
-
-  // 메인페이지 댓글 관련 일부 완료 부분
 
   return (
     <section id="main_container">
@@ -66,13 +59,7 @@ function Main_page() {
                 </div>
                 {/* 댓글 관련 map반복문 + 컴포넌트 부분 */}
                 {댓글배열.map((item, i) => {
-                  return (
-                    <Component_comment
-                      댓글아이디값={댓글아이디값}
-                      item={item}
-                      key={i}
-                    />
-                  );
+                  return <Component_comment item={item} key={i} />;
                 })}
               </div>
             </div>
@@ -84,7 +71,8 @@ function Main_page() {
                 placeholder="댓글달기..."
                 // 댓글 관련 클릭시 이벤트 진행부분
                 onChange={event => {
-                  댓글변경(event.target.value);
+                  const { value } = event.target;
+                  댓글변경(value);
                 }}
                 onKeyUp={event =>
                   event.target.value.length > 0

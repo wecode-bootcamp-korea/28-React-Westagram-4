@@ -1,9 +1,9 @@
 // 항상 시작전에 git checkout feature/si 실시하고 확인할것
 import React from 'react';
 import { Link } from 'react-router-dom';
-import 이미지 from '../../../assets/images/profile_si.png';
 import Main_page from './Main_page';
 import Nav from './Nav';
+import 이미지 from '../../../assets/images/profile_si.png';
 import '../Main/Main.scss';
 
 function Main() {
@@ -17,7 +17,7 @@ function Main() {
             <img src={이미지} alt="프로필이미지" />
           </div>
           <div className="detail">
-            <div className="id m_text">Insta_Week2_test</div>
+            <div className="id m_text">Insta_React_test</div>
             <div className="ko_name">CSS가 너무 싫다</div>
           </div>
         </div>
@@ -27,24 +27,6 @@ function Main() {
             <div className="more">모두 보기</div>
           </header>
           <div className="scroll_inner">
-            <div className="scroll_userlist">
-              <div className="profile_small_img">
-                <img src={이미지} alt="프로필이미지" />
-              </div>
-              <div className="detail">
-                <div className="id">001</div>
-                <div className="time">1시간 전</div>
-              </div>
-            </div>
-            <div className="scroll_userlist">
-              <div className="profile_small_img">
-                <img src={이미지} alt="프로필이미지" />
-              </div>
-              <div className="detail">
-                <div className="id">002</div>
-                <div className="time">2시간 전</div>
-              </div>
-            </div>
             <div class="scroll_userlist">
               <div class="profile_small_img">
                 <img src={이미지} alt="프로필이미지" />
@@ -52,15 +34,6 @@ function Main() {
               <div className="detail">
                 <div className="id">003</div>
                 <div className="time">24시간 전</div>
-              </div>
-            </div>
-            <div className="scroll_userlist">
-              <div className="profile_small_img">
-                <img src={이미지} alt="프로필이미지" />
-              </div>
-              <div className="detail">
-                <div className="id">004</div>
-                <div className="time">5시간 전</div>
               </div>
             </div>
           </div>

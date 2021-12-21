@@ -21,6 +21,7 @@
     font-size: 14px;
     padding: 7px 8px 7px;
   }
+
   p {
     margin-bottom: 6px;
   }
@@ -32,18 +33,6 @@
   }
 }
 
-// .submit_btn {
-//   width: 268px;
-//   height: 30px;
-//   margin: 13px auto;
-//   background-color: #0095f6;
-//   border: none;
-//   border-radius: 3px;
-//   color: white;
-//   font-size: 14px;
-//   font-weight: bold;
-//   text-align: center; 리엑트 과제2로 인한 비 활성화
-// }
 .submit_btn_active {
   background: #0095f6;
   color: #fff;
@@ -56,6 +45,7 @@
   text-align: center;
   font-weight: bold;
 }
+
 .submit_btn_unactive {
   background-color: #b2dffc;
   color: #fff;
@@ -73,12 +63,15 @@
   &disabled {
     background-color: #b9dffc;
   }
+
   &hover {
     cursor: default;
   }
+
   &focus {
     outline: none;
   }
+
   &enabled {
     &hover {
       cursor: default;
@@ -111,28 +104,6 @@ a:link {
   text-decoration-line: none;
 }
 
-/* .insta_join {
-  font-size: 15px;
-  text-align: center;
-  width: 310px;
-  height: 60px;
-  margin: 0px auto;
-  position: absolute;
-  top: 460px;
-  left: 453px;
-  background-color: #fff;
-  border: 1px solid #dbdbdb;
-}
-.insta_member {
-  justify-content: center;
-  margin: 10px 0 10px 0;
-  padding-top: 12px;
-} */
-// .insta_join_title {
-//   font-size: 15px;
-//   text-align: center;
-//   margin-top: 30px;
-// }
 .insta_join {
   font-size: 15px;
   text-align: center;
