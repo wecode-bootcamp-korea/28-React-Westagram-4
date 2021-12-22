@@ -7,24 +7,24 @@ function Nav() {
   return (
     <div>
       <section id="container">
-        <header id="header">
-          <section className="inner">
-            <h1 className="logo">
+        <header id="Nav">
+          <section className="Inner">
+            <h1 className="Logo">
               <div className="insta_icon" />
               <div className="write_logo" />
             </h1>
-            <div class="search_box">
-              <input type="text" placeholder="검색" id="search-field" />
-              <div className="search_field_small">
-                <span className="small_search_icon" />
+            <div class="SearchBox">
+              <input type="text" placeholder="검색" id="SearchField" />
+              <div className="SearchFieldSmall">
+                <span className="SmallSearchIcon" />
               </div>
             </div>
             <div className="right_icons">
               <Link to="/login-sangil">
-                <div className="compass_icon" />
+                <div className="CompassIcon" />
               </Link>
-              <div className="heart_icon_outline" />
-              <div className="user_icon_profile" />
+              <div className="HeartIconOutline" />
+              <div className="UserIconProfile" />
             </div>
           </section>
         </header>

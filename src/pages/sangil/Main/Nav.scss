@@ -12,21 +12,21 @@
   height: 29px;
 }
 
-.compass_icon {
+.CompassIcon {
   display: inline-block;
   background: url('../../../assets/images/explore_si.png') no-repeat;
   width: 70px;
   height: 51px;
 }
 
-.heart_icon_outline {
+.HeartIconOutline {
   display: inline-block;
   background: url('../../../assets/images/heart_si.png') no-repeat;
   width: 70px;
   height: 51px;
 }
 
-.user_icon_profile {
+.UserIconProfile {
   display: inline-block;
   background: url('../../../assets/images/profile_si.png') no-repeat;
 
@@ -34,14 +34,14 @@
   height: 51px;
 }
 
-.small_search_icon {
+.SmallSearchIcon {
   display: inline-block;
   background: url('../../../assets/images/background01_si.png') no-repeat -337px -246px;
   width: 10px;
   height: 10px;
 }
 
-#header {
+#Nav {
   width: 100%;
   position: absolute;
   z-index: 999;
@@ -49,7 +49,7 @@
   .on {
     height: 52px;
   }
-  .inner {
+  .Inner {
     width: 975px;
     height: 77px;
     margin: 0 auto;
@@ -58,7 +58,7 @@
     align-items: center;
     transition: all 1s;
   }
-  .logo {
+  .Logo {
     .insta_icon {
       position: relative;
       margin-right: 30px;
@@ -74,10 +74,10 @@
       }
     }
   }
-  #scarch_box {
+  #ScarchBox {
     position: relative;
   }
-  #search-field {
+  #SearchField {
     width: 185px;
     height: 28px;
     background: #fafafa;
@@ -86,9 +86,9 @@
     padding: 3px 30px;
     color: #999;
     font-weight: 400;
-    text-align: left; /* 글자 입력시 왼쪽부터 출력 */
+    text-align: left;
     font-size: 14px;
-    outline: none; /* 포커스시 나타나는 파란선 */
+    outline: none;
     &:focus {
       &::placeholder {
         font-size: 14px;
@@ -98,11 +98,11 @@
       font-size: 0;
     }
   }
-  .search_field_small {
-    position: absolute; /* 검색창 위에 글자 보이는 용도 */
+  .SearchFieldSmall {
+    position: absolute;
     left: 43%;
     top: 50%;
     transform: translate(-50%, -50%);
-    pointer-events: none; /* 검색 누를때 포인터 인식 방지 */
+    pointer-events: none;
   }
 }

@@ -3,7 +3,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Main_page from './Main_page';
 import Nav from './Nav';
-import 이미지 from '../../../assets/images/profile_si.png';
+import { Component_Right_list } from './Component_Right_list';
+import Image from '../../../assets/images/profile_si.png';
 import '../Main/Main.scss';
 
 function Main() {
@@ -14,7 +15,7 @@ function Main() {
       <div className="main_right">
         <div className="user_profile">
           <div className="profile_small_img">
-            <img src={이미지} alt="프로필이미지" />
+            <img src={Image} alt="프로필이미지" />
           </div>
           <div className="detail">
             <div className="id m_text">Insta_React_test</div>
@@ -26,17 +27,22 @@ function Main() {
             <p>스토리</p>
             <div className="more">모두 보기</div>
           </header>
-          <div className="scroll_inner">
-            <div className="scroll_userlist">
-              <div className="profile_small_img">
-                <img src={이미지} alt="프로필이미지" />
+
+          {Component_Right_list.map(Test => {
+            return (
+              <div className="scroll_inner">
+                <div className="scroll_userlist">
+                  <div className="profile_small_img">
+                    <img src={Image} alt="프로필이미지" />
+                  </div>
+                  <div className="detail">
+                    <div className="id">{Test.content}</div>
+                    <div className="time">{Test.time}</div>
+                  </div>
+                </div>
               </div>
-              <div className="detail">
-                <div className="id">003</div>
-                <div className="time">24시간 전</div>
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </article>
         <article className="recommend">
           <header className="reco_header">
@@ -45,8 +51,9 @@ function Main() {
           </header>
           <div className="scroll_userlist">
             <div className="profile_small_img">
-              <img src={이미지} alt="프로필이미지" />
+              <img src={Image} alt="프로필이미지" />
             </div>
+
             <div className="detail">
               <div className="id">009</div>
               <div className="time">회원님을 팔로우합니다.</div>

@@ -1,29 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import Component_comment from './Component_comment';
-
-import 이미지 from '../../../assets/images/profile_si.png';
+import React, { useState } from 'react';
+import Component_Comment from './Component_comment';
+import Image from '../../../assets/images/profile_si.png';
 import '../Main/Main_page.scss';
 
 function Main_page() {
-  const [댓글, 댓글변경] = useState('');
-  const [댓글배열, 댓글배열변경] = useState([]);
-  const [게시버튼활성화, 게시버튼활성화변경] = useState(false);
+  const [Commentse, SetCommentse] = useState('');
+  const [Comment_Array, SetComment_Array] = useState([]);
+  const [Upload_Btn_Active, SetUpload_Btn_Active] = useState(false);
 
-  const comment_btn_plus = e => {
-    const comment_Arr = [...댓글배열];
-    comment_Arr.push(댓글);
-    댓글배열변경(comment_Arr);
+  const Comment_Btn_Plus = e => {
+    const Comment_Arr = [...Comment_Array];
+    Comment_Arr.push(Commentse);
+    SetComment_Array(Comment_Arr);
   };
 
   return (
     <section id="main_container">
-      <div className="inner">
-        <div className="contents_box">
+      <div className="Inner">
+        <div className="Contents_Box">
           <article className="contents">
             <header className="contents_top">
               <div className="user_container">
                 <div className="profile_img">
-                  <img src={이미지} alt="프로필이미지" />
+                  <img src={Image} alt="프로필이미지" />
                 </div>
                 <div className="user_name">
                   <p className="nick_name">Wecode_Week2</p>
@@ -34,7 +33,10 @@ function Main_page() {
             <div className="img_section">
               <div className="trans_inner">
                 <div>
-                  <img src="https://media.istockphoto.com/photos/brandenburg-gate-picture-id490614171?b=1&k=20&m=490614171&s=170667a&w=0&h=4Ak2kvxjmCf0HpjFTvSZb_QGsqSrASSJ_MI63oBHOEU=" />
+                  <img
+                    src="https://media.istockphoto.com/photos/brandenburg-gate-picture-id490614171?b=1&k=20&m=490614171&s=170667a&w=0&h=4Ak2kvxjmCf0HpjFTvSZb_QGsqSrASSJ_MI63oBHOEU="
+                    alt="피드용 메인 이미지"
+                  />
                 </div>
               </div>
             </div>
@@ -60,8 +62,8 @@ function Main_page() {
                   <p className="comment_text_test">댓글 테스트 진행중</p>
                 </div>
 
-                {댓글배열.map((item, i) => {
-                  return <Component_comment item={item} key={i} />;
+                {Comment_Array.map((item, i) => {
+                  return <Component_Comment item={item} key={i} />;
                 })}
               </div>
             </div>
@@ -71,23 +73,20 @@ function Main_page() {
                 type="text"
                 className="comment_test"
                 placeholder="댓글달기..."
-                // 댓글 관련 클릭시 이벤트 진행부분
                 onChange={event => {
                   const { value } = event.target;
-                  댓글변경(value);
+                  SetCommentse(value);
                 }}
                 onKeyUp={event =>
                   event.target.value.length > 0
-                    ? 게시버튼활성화변경(true)
-                    : 게시버튼활성화변경(false)
+                    ? SetUpload_Btn_Active(true)
+                    : SetUpload_Btn_Active(false)
                 }
               />
               <button
-                className="upload_btn_m_text"
-                disabled={게시버튼활성화 ? false : true}
-                onClick={comment_btn_plus}
-
-                // 댓글 관련 클릭시 이벤트 완료 부분
+                className="Upload_Btn"
+                disabled={Upload_Btn_Active ? false : true}
+                onClick={Comment_Btn_Plus}
               >
                 게시
               </button>

@@ -4,12 +4,12 @@
   right: 230px;
   display: flex;
   justify-content: center;
-  .inner {
+  .Inner {
     width: 930px;
     height: 500px;
     position: relative;
   }
-} // 메인 컨텐츠 수정부분
+}
 
 .contents {
   position: absolute;
@@ -112,7 +112,7 @@
       margin-left: 13px;
     }
 
-    .upload_btn_m_text {
+    .Upload_Btn {
       position: absolute;
       right: 15px;
       bottom: 40px;
