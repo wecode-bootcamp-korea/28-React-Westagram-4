@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   AiOutlineEllipsis,
   AiOutlineHeart,
@@ -7,48 +7,40 @@ import {
 import { BsBookmark, BsUpload } from 'react-icons/bs';
 import CommentsList from './CommentsList';
 
-function Feeds({ feed, setFeed, update }) {
-  const { id, feedId, userName, profileImg, feedImg, content, comments } = feed;
-  const [comment, setComment] = useState([]);
+function Feeds({ feed }) {
+  const { userName, content, id, feedImg } = feed;
+  const [username, setUserName] = useState('abc');
+  const [comments, setComments] = useState([]);
   const [commentKey, setCommentKey] = useState(100);
-  const [userCommentName, setUserCommentName] = useState('abc');
-  const [commentInput, setCommentInput] = useState('');
-
-  const commentSave = e => setCommentInput(e.target.value);
+  const [inputText, setInputText] = useState('');
+  const commentSave = e => setInputText(e.target.value);
 
   const commentAdd = () => {
-    const nextComment = comment.concat({
+    const nextComment = {
       id: commentKey,
-      feedId: feedId,
-      userName: userCommentName,
-      comment: commentInput,
-      isLiked: true,
-    });
-
+      userName: username,
+      feedId: id,
+      comment: inputText,
+      isLiked: false,
+    };
+    setComments([...comments, nextComment]);
     setCommentKey(commentKey + 1);
-    setUserCommentName(userCommentName + 'c');
-    setComment(nextComment);
-    setCommentInput('');
+    setUserName(username + 'c');
+    setInputText('');
   };
 
-  const inputKeyPress = e => {
-    if (e.key === 'Enter') {
-      commentAddRequest();
-    }
+  const inputKeyEnter = e => {
+    return e.key === 'Enter' ? commentAdd() : '';
   };
 
-  const commentAddRequest = () => {
-    commentAdd();
-    setFeed({
-      id: id,
-      userName: userName,
-      profileImg: profileImg,
-      feedImg: feedImg,
-      content: content,
-      comments: [...comments, ...comment],
-    });
-    update();
-  };
+  useEffect(() => {
+    fetch('http://localhost:3000/data/feedComment.json')
+      .then(res => res.json())
+      .then(data => {
+        const nowComment = data.filter(commen => commen.feedId === id);
+        return setComments(nowComment);
+      });
+  }, []);
 
   return (
     <li>
@@ -65,7 +57,7 @@ function Feeds({ feed, setFeed, update }) {
           </div>
         </div>
         <div className="feed-image">
-          <img alt="minuk_feed_image" src="/images/mu/feed_image01.jpg" />
+          <img alt="minuk_feed_image" src={feedImg} />
         </div>
         <div className="feed-wrap">
           <div className="feed-icon">
@@ -104,11 +96,11 @@ function Feeds({ feed, setFeed, update }) {
             id="comment-input"
             type="text"
             placeholder="댓글 달기..."
-            value={commentInput}
+            value={inputText}
             onChange={commentSave}
-            onKeyPress={inputKeyPress}
+            onKeyPress={inputKeyEnter}
           />
-          <button id="comment-button" type="button" onClick={commentAddRequest}>
+          <button id="comment-button" type="button" onClick={commentAdd}>
             게시
           </button>
         </div>

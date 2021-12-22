@@ -64,8 +64,8 @@ button {
       width: 100%;
       height: 4.5vw;
       margin: 3vw auto;
-      color: rgb(255, 255, 255);
       background-color: rgb(48, 137, 219);
+      color: rgb(255, 255, 255);
       border-radius: 5px;
       font-size: 2vw;
       text-align: center;
@@ -74,6 +74,9 @@ button {
       a {
         pointer-events: none;
       }
+    }
+    .btn-active {
+      opacity: 1;
     }
     > a {
       display: inline-block;

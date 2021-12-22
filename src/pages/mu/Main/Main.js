@@ -8,11 +8,20 @@ import {
 } from 'react-icons/ai';
 
 import './Main.scss';
-// import Feeds from './Feeds';
-import Feed from './Feed';
+import Feeds from './Feeds';
 import Aside from './Aside/Aside';
 
 function Main() {
+  const [feeds, setFeeds] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/data/feedData.json')
+      .then(res => res.json())
+      .then(data => {
+        setFeeds(data);
+      });
+  }, []);
+
   return (
     <>
       <div className="header-wrap">
@@ -59,15 +68,9 @@ function Main() {
       <div className="main-wrap">
         <main className="main">
           <ul>
-            <Feed />
-            {/* {feeds.map(fee => (
-              <Feeds
-                key={fee.id}
-                feed={fee}
-                setFeed={setFeed}
-                update={update}
-              />
-            ))} */}
+            {feeds.map(fee => (
+              <Feeds key={fee.id} feed={fee} />
+            ))}
           </ul>
         </main>
         <Aside />
