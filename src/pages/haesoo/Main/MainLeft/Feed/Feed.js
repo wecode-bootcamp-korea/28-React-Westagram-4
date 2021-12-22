@@ -6,15 +6,15 @@ export default function Feed() {
   return (
     <div className="feed-container">
       <header className="feed-header">
-        <div className="header__image" />
-        <div className="header__id">__hackney</div>
-        <button className="header__button">•••</button>
+        <div className="feed-header__image" />
+        <div className="feed-header__id">__hackney</div>
+        <button className="feed-header__button">•••</button>
       </header>
       <div className="feed-image">
-        <div className="image__upload">
+        <div className="feed-image__upload">
           <img alt="feed" src="/images/haesoo/feed_images/1.jpeg" />
         </div>
-        <div className="image__buttons">
+        <div className="feed-image__buttons">
           <p />
           <p />
           <p />
