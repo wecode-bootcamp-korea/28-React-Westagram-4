@@ -5,6 +5,12 @@ export default function Comment() {
   const [commentData, setCommentData] = useState([]);
   const [commentInput, setCommentInput] = useState('');
   const [comments, setComment] = useState([]);
+  const newComment = {
+    id: '',
+    userName: 'haesoo',
+    content: commentInput,
+    isLiked: '',
+  };
 
   useEffect(() => {
     fetch('http://localhost:3000/data/haesoo/commentData.json', {
@@ -23,14 +29,7 @@ export default function Comment() {
 
   const handleSubmit = event => {
     event.preventDefault();
-    setComment(
-      comments.concat({
-        id: '',
-        userName: 'haesoo',
-        content: commentInput,
-        isLiked: '',
-      })
-    );
+    setComment([...comments, newComment]);
     setCommentInput('');
   };
 

@@ -13,15 +13,17 @@ function Login() {
   };
 
   const handleIdChange = event => {
-    setIsIdValid(event.target.value);
+    const { value } = event.target;
+    setIsIdValid(value);
   };
 
   const handlePwChange = event => {
-    setIsPwValid(event.target.value);
+    const { value } = event.target;
+    setIsPwValid(value);
   };
 
-  const checkedValid = (id, pw) => {
-    return id.includes('@') && pw.length > 6 ? false : true;
+  const checkedValid = () => {
+    return isIdValid.includes('@') && isPwValid.length > 6 ? false : true;
   };
 
   const handleEnter = event => {
@@ -48,7 +50,7 @@ function Login() {
                 type="password"
               />
               <button
-                disabled={checkedValid(isIdValid, isPwValid)}
+                disabled={checkedValid()}
                 onClick={goToMain}
                 className="login-button"
                 type="button"
