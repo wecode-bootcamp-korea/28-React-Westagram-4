@@ -36,10 +36,7 @@ function Feeds({ feed }) {
   useEffect(() => {
     fetch('http://localhost:3000/data/feedComment.json')
       .then(res => res.json())
-      .then(data => {
-        const nowComment = data.filter(commen => commen.feedId === id);
-        return setComments(nowComment);
-      });
+      .then(data => setComments(data.filter(commen => commen.feedId === id)));
   });
 
   return (
