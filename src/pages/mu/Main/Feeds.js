@@ -40,7 +40,7 @@ function Feeds({ feed }) {
         const nowComment = data.filter(commen => commen.feedId === id);
         return setComments(nowComment);
       });
-  }, []);
+  }, [id]);
 
   return (
     <li>

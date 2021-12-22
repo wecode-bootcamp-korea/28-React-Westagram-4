@@ -18,7 +18,7 @@ function Login() {
 
   const loginValidate = () => {
     const regExpId =
-      /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+      /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
     const regExpPassword = /^(?=.*\d)(?=.*[a-zA-Z])[0-9a-zA-Z]{5,16}$/;
 
     const validation = regExpId.test(userId) && regExpPassword.test(userPw);
@@ -29,33 +29,34 @@ function Login() {
     navigate('/main');
   };
 
-  // const requestSignUp = () => {
-  //   fetch('http://10.58.3.158:8000/users/signup', {
-  //     method: 'POST',
-  //     body: JSON.stringify({
-  //       email: userId,
-  //       name: '진민욱',
-  //       password: userPw,
-  //       phone_number: '010-1234-9876',
-  //       date_of_birth: null,
-  //     }),
-  //   })
-  //     .then(response => response.json())
-  //     .then(result => console.log('결과: ', result));
-  // };
+  /*
+  const requestSignUp = () => {
+    fetch('http://10.58.3.158:8000/users/signup', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: userId,
+        name: '진민욱',
+        password: userPw,
+        phone_number: '010-1234-9876',
+        date_of_birth: null,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => console.log('결과: ', result));
+  };
 
-  // const requestLogin = () => {
-  //   fetch('http://10.58.3.158:8000/users/login', {
-  //     method: 'POST',
-  //     body: JSON.stringify({
-  //       email: userId,
-  //       password: userPw,
-  //     }),
-  //   })
-  //     .then(response => response.json())
-  //     .then(result => console.log('결과: ', result));
-  // };
-
+  const requestLogin = () => {
+    fetch('http://10.58.3.158:8000/users/login', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: userId,
+        password: userPw,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => console.log('결과: ', result));
+  };
+  */
   return (
     <>
       <div className="wrap">
