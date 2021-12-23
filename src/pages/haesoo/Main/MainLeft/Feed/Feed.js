@@ -59,7 +59,7 @@ export default function Feed(props) {
           <div className="feed-user__text">{feed.postComment}</div>
         </div>
       </div>
-      <Comment />
+      <Comment commentDataList={feed.commentList} />
     </div>
   ));
   return <div>{feeds}</div>;

@@ -8,39 +8,15 @@
     "postComment": "안뇽 나는 인스타그램 클론중",
     "commentList": [
       {
-        "id": 1,
-        "userName": "__jeongjaehyun",
+        "id": 11,
+        "userName": "user1",
         "content": "1등",
         "isLiked": "true"
       },
       {
-        "id": 2,
-        "userName": "onuk",
-        "content": "1등",
-        "isLiked": "true"
-      },
-      {
-        "id": 3,
-        "userName": "dlwldms",
-        "content": "1등",
-        "isLiked": "true"
-      },
-      {
-        "id": 4,
-        "userName": "",
-        "content": "1등",
-        "isLiked": "true"
-      },
-      {
-        "id": 5,
-        "userName": "",
-        "content": "1등",
-        "isLiked": "true"
-      },
-      {
-        "id": 6,
-        "userName": "",
-        "content": "1등",
+        "id": 12,
+        "userName": "user2",
+        "content": "2등",
         "isLiked": "true"
       }
     ]
@@ -54,39 +30,21 @@
     "postComment": "안뇽 나는 인스타그램 클론중",
     "commentList": [
       {
-        "id": 1,
-        "userName": "aaOOdd",
+        "id": 21,
+        "userName": "user1",
         "content": "1등",
         "isLiked": "true"
       },
       {
-        "id": 2,
-        "userName": "onuk",
-        "content": "1등",
+        "id": 22,
+        "userName": "user2",
+        "content": "2등",
         "isLiked": "true"
       },
       {
-        "id": 3,
-        "userName": "dlwldms",
-        "content": "1등",
-        "isLiked": "true"
-      },
-      {
-        "id": 4,
-        "userName": "haesoo",
-        "content": "1등",
-        "isLiked": "true"
-      },
-      {
-        "id": 5,
-        "userName": "skljlkga",
-        "content": "1등",
-        "isLiked": "true"
-      },
-      {
-        "id": 6,
-        "userName": "dkjaqqqq",
-        "content": "1등",
+        "id": 23,
+        "userName": "user3",
+        "content": "3등",
         "isLiked": "true"
       }
     ]
@@ -100,21 +58,21 @@
     "postComment": "안뇽 나는 인스타그램 클론중",
     "commentList": [
       {
-        "id": 1,
-        "userName": "aaOOdd",
+        "id": 31,
+        "userName": "user1",
         "content": "1등",
         "isLiked": "true"
       },
       {
-        "id": 2,
-        "userName": "onuk",
-        "content": "1등",
+        "id": 32,
+        "userName": "user2",
+        "content": "2등",
         "isLiked": "true"
       },
       {
-        "id": 3,
-        "userName": "dlwldms",
-        "content": "1등",
+        "id": 33,
+        "userName": "user3",
+        "content": "3등",
         "isLiked": "true"
       }
     ]

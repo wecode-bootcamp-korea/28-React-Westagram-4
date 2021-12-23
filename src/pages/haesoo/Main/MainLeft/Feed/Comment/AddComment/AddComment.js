@@ -1,10 +1,7 @@
 import React from 'react';
 import './AddComment.scss';
 
-export default function AddComment(props) {
-  const commentDataList = props.commentDataList;
-  const { comments } = props;
-
+export default function AddComment({ comments, commentDataList }) {
   const commentList = [...commentDataList];
 
   if (comments.length) {

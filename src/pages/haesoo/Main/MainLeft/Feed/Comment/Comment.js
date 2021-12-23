@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import AddComment from './AddComment/AddComment';
 import '../Comment/Comment.scss';
 
-export default function Comment() {
-  const [commentData, setCommentData] = useState([]);
+export default function Comment(props) {
+  const { commentDataList } = props;
+
   const [commentInput, setCommentInput] = useState('');
   const [comments, setComment] = useState([]);
   const newComment = {
@@ -12,16 +13,6 @@ export default function Comment() {
     content: commentInput,
     isLiked: '',
   };
-
-  useEffect(() => {
-    fetch('http://localhost:3000/data/haesoo/commentData.json', {
-      method: 'GET',
-    })
-      .then(res => res.json())
-      .then(data => {
-        setCommentData(data);
-      });
-  }, []);
 
   const handleChange = event => {
     const { value } = event.target;
@@ -39,7 +30,7 @@ export default function Comment() {
       <AddComment
         className="feed-comment__add"
         comments={comments}
-        commentDataList={commentData}
+        commentDataList={commentDataList}
       />
       <div className="feed-comment">
         <form onSubmit={handleSubmit} className="feed-comment__left">

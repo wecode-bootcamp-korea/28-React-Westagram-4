@@ -18,7 +18,7 @@ function MainLeft() {
   }, []);
 
   useEffect(() => {
-    fetch('http://localhost:3000/data/haesoo/feedData.json', {
+    fetch('http://localhost:3001/data/haesoo/feedData.json', {
       method: 'GET',
     })
       .then(res => res.json())
