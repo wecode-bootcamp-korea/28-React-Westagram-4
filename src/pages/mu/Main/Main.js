@@ -7,9 +7,9 @@ import {
   AiOutlineCamera,
 } from 'react-icons/ai';
 
-import './Main.scss';
 import Feeds from './Feeds';
 import Aside from './Aside/Aside';
+import './Main.scss';
 
 function Main() {
   const [feeds, setFeeds] = useState([]);
@@ -61,7 +61,7 @@ function Main() {
           </nav>
         </div>
       </div>
-      <div className="main-wrap">
+      <div className="main-wrap-mu">
         <main className="main">
           <ul>
             {feeds.map(feed => (

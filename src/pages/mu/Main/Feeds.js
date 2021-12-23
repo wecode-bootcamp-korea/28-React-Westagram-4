@@ -93,7 +93,7 @@ function Feeds({ feed }) {
           </div>
           <CommentsList comments={comments} />
         </div>
-        <div className="feed-comment-form">
+        <div className="form">
           <input
             type="text"
             placeholder="댓글 달기..."

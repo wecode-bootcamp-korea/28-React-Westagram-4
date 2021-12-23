@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './Login.scss';
 import Footer from '../../../components/Footer/Footer';
+import './Login.scss';
 
 function Login() {
   const [userId, setUserId] = useState('');
@@ -29,7 +29,6 @@ function Login() {
     navigate('/main');
   };
 
-  /*
   const requestSignUp = () => {
     fetch('http://10.58.3.158:8000/users/signup', {
       method: 'POST',
@@ -56,10 +55,10 @@ function Login() {
       .then(response => response.json())
       .then(result => console.log('결과: ', result));
   };
-  */
+
   return (
     <>
-      <div className="login-wrap">
+      <div className="login-wrap-mu">
         <main className="login-container">
           <h1>westagram</h1>
           <form>

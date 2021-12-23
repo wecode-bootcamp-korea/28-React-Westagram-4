@@ -1,3 +1,4 @@
+// Comment Mock Data를 위한 컴포넌트
 import React, { useState, useEffect } from 'react';
 import {
   AiOutlineEllipsis,
