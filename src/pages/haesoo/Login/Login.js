@@ -27,7 +27,34 @@ function Login() {
   };
 
   const handleEnter = event => {
-    if (checkedValid && event.key === 'Enter') return goToMain();
+    if (checkedValid && event.key === 'Enter') return fetchData();
+  };
+
+  const fetchData = () => {
+    fetch('http://10.58.3.173:8000/users/signup', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: isIdValid,
+        password: isPwValid,
+        userName: '정해수',
+        mobile: '010-7226-2627',
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        if (result.message === 'INVALID PASSWORD') {
+          alert(
+            '비밀번호는 8자리 이상, 문자,숫자,특수 기호 모두 한가지 이상 입력해주세요.'
+          );
+        } else if (result.message === 'EXIST EMAIL') {
+          alert('존재하는 이메일 입니다.');
+        } else if (result.message === 'INVALID EMAIL') {
+          alert('이메일을 다시 입력해주세요.');
+        } else if (result.message === 'SUCCESS') {
+          alert('회원가입을 축하합니다.');
+          goToMain();
+        }
+      });
   };
 
   return (
@@ -51,7 +78,7 @@ function Login() {
               />
               <button
                 disabled={checkedValid()}
-                onClick={goToMain}
+                onClick={fetchData}
                 className="login-button"
                 type="button"
               >
