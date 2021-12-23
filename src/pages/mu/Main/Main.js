@@ -1,0 +1,78 @@
+import React, { useState, useEffect } from 'react';
+import {
+  AiOutlineSearch,
+  AiOutlineCompass,
+  AiOutlineHeart,
+  AiOutlineUser,
+  AiOutlineCamera,
+} from 'react-icons/ai';
+
+import Feeds from './Feeds';
+import Aside from './Aside/Aside';
+import './Main.scss';
+
+function Main() {
+  const [feeds, setFeeds] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/data/feedData.json')
+      .then(res => res.json())
+      .then(data => {
+        setFeeds(data);
+      });
+  }, []);
+
+  return (
+    <>
+      <div className="header-wrap">
+        <div>
+          <header>
+            <h1>westagram</h1>
+            <i>
+              <AiOutlineCamera />
+            </i>
+          </header>
+          <nav>
+            <div className="search">
+              <form>
+                <input type="text" placeholder="검색" />
+                <ul />
+              </form>
+              <i>
+                <AiOutlineSearch />
+              </i>
+            </div>
+            <div className="menu">
+              <div>
+                <i>
+                  <AiOutlineCompass />
+                </i>
+                <i>
+                  <AiOutlineHeart />
+                </i>
+                <i>
+                  <AiOutlineUser />
+                </i>
+              </div>
+              <div className="profile">
+                <img alt="profile" src="/images/mu/profile03.jpg" />
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div className="main-wrap-mu">
+        <main className="main">
+          <ul>
+            {feeds.map(feed => (
+              <Feeds key={feed.id} feed={feed} />
+            ))}
+          </ul>
+        </main>
+        <Aside />
+      </div>
+    </>
+  );
+}
+
+export default Main;
