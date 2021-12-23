@@ -1,9 +1,9 @@
 // 항상 시작전에 git checkout feature/si 실시하고 확인할것
 import React from 'react';
 import { Link } from 'react-router-dom';
-import MainPage from './Main_page';
 import Nav from './Nav';
-import { Component_Right_list } from './Component_Right_list';
+import MainPage from './Main_page';
+import { ASIDESTORYLIST } from './ASIDESTORYLIST';
 
 import Image from '../../../assets/images/profile_si.png';
 import '../Main/Main.scss';
@@ -14,13 +14,13 @@ function Main() {
       <Nav />
       <MainPage />
       <div className="main_right">
-        <div className="user_profile">
-          <div className="profile_small_img">
+        <div className="UserProfile">
+          <div className="ProfileSmallImg">
             <img src={Image} alt="프로필이미지" />
           </div>
           <div className="detail">
             <div className="id m_text">Insta_React_test</div>
-            <div className="ko_name">비공개</div>
+            <div className="KoName">비공개</div>
           </div>
         </div>
         <article className="story">
@@ -29,11 +29,11 @@ function Main() {
             <div className="more">모두 보기</div>
           </header>
 
-          {Component_Right_list.map(RightList => {
+          {ASIDESTORYLIST.map(RightList => {
             return (
               <div className="scroll_inner">
                 <div className="scroll_userlist">
-                  <div className="profile_small_img">
+                  <div className="ProfileSmallImg">
                     <img src={Image} alt="프로필이미지" />
                   </div>
                   <div className="detail" key={RightList.id}>
@@ -54,7 +54,7 @@ function Main() {
             <div className="more">모두 보기</div>
           </header>
           <div className="scroll_userlist">
-            <div className="profile_small_img">
+            <div className="ProfileSmallImg">
               <img src={Image} alt="프로필이미지" />
             </div>
 
@@ -62,7 +62,7 @@ function Main() {
               <div className="id">009</div>
               <div className="time">회원님을 팔로우합니다.</div>
             </div>
-            <div className="follows">
+            <div className="Follow">
               <Link to="/login-sangil">팔로우</Link>
             </div>
           </div>

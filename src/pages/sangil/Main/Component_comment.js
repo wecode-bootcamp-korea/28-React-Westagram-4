@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ComponentComment = props => {
+const ComponentComment = ({ item }) => {
   return (
     <div className="MissionCommentTest">
-      <p className="MissionList">{props.item}</p>
+      <p className="MissionList">{item}</p>
     </div>
   );
 };

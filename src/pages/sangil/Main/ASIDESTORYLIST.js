@@ -1,4 +1,4 @@
-export const Component_Right_list = [
+export const ASIDESTORYLIST = [
   { id: 1, content: 'Vue', time: '1시간전' },
   { id: 2, content: 'React', time: '29시간전' },
   { id: 3, content: 'Python', time: '3일전' },
