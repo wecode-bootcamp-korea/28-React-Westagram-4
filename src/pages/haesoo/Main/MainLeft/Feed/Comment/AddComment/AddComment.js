@@ -2,7 +2,7 @@ import React from 'react';
 import './AddComment.scss';
 
 export default function AddComment(props) {
-  const { commentDataList } = props;
+  const commentDataList = props.commentDataList;
   const { comments } = props;
 
   const commentList = [...commentDataList];

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import AddComment from './AddComment/AddComment';
+import '../Comment/Comment.scss';
 
 export default function Comment() {
   const [commentData, setCommentData] = useState([]);
@@ -50,7 +51,7 @@ export default function Comment() {
             placeholder="댓글 달기..."
             type="text"
           />
-          <button className="feed-comment__button">게시</button>
+          <button>게시</button>
         </form>
       </div>
     </>

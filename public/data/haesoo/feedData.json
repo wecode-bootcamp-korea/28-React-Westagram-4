@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "postUser": "__hackney",
+    "profile": "/images/haesoo/story_images/1.JPG",
+    "photo": "/images/haesoo/story_images/3.JPG",
+    "likeNum": 170,
+    "postComment": "안뇽 나는 인스타그램 클론중",
+    "commentList": [
+      {
+        "id": 1,
+        "userName": "__jeongjaehyun",
+        "content": "1등",
+        "isLiked": "true"
+      },
+      {
+        "id": 2,
+        "userName": "onuk",
+        "content": "1등",
+        "isLiked": "true"
+      },
+      {
+        "id": 3,
+        "userName": "dlwldms",
+        "content": "1등",
+        "isLiked": "true"
+      },
+      {
+        "id": 4,
+        "userName": "",
+        "content": "1등",
+        "isLiked": "true"
+      },
+      {
+        "id": 5,
+        "userName": "",
+        "content": "1등",
+        "isLiked": "true"
+      },
+      {
+        "id": 6,
+        "userName": "",
+        "content": "1등",
+        "isLiked": "true"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "postUser": "__jeongjaehyun",
+    "profile": "/images/haesoo/story_images/1.JPG",
+    "photo": "/images/haesoo/story_images/7.JPG",
+    "likeNum": 170,
+    "postComment": "안뇽 나는 인스타그램 클론중",
+    "commentList": [
+      {
+        "id": 1,
+        "userName": "aaOOdd",
+        "content": "1등",
+        "isLiked": "true"
+      },
+      {
+        "id": 2,
+        "userName": "onuk",
+        "content": "1등",
+        "isLiked": "true"
+      },
+      {
+        "id": 3,
+        "userName": "dlwldms",
+        "content": "1등",
+        "isLiked": "true"
+      },
+      {
+        "id": 4,
+        "userName": "haesoo",
+        "content": "1등",
+        "isLiked": "true"
+      },
+      {
+        "id": 5,
+        "userName": "skljlkga",
+        "content": "1등",
+        "isLiked": "true"
+      },
+      {
+        "id": 6,
+        "userName": "dkjaqqqq",
+        "content": "1등",
+        "isLiked": "true"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "postUser": "ninicho",
+    "profile": "/images/haesoo/story_images/1.JPG",
+    "photo": "/images/haesoo/story_images/4.JPG",
+    "likeNum": 170,
+    "postComment": "안뇽 나는 인스타그램 클론중",
+    "commentList": [
+      {
+        "id": 1,
+        "userName": "aaOOdd",
+        "content": "1등",
+        "isLiked": "true"
+      },
+      {
+        "id": 2,
+        "userName": "onuk",
+        "content": "1등",
+        "isLiked": "true"
+      },
+      {
+        "id": 3,
+        "userName": "dlwldms",
+        "content": "1등",
+        "isLiked": "true"
+      }
+    ]
+  }
+]

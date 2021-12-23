@@ -2,17 +2,19 @@ import React from 'react';
 import Comment from './Comment/Comment';
 import './Feed.scss';
 
-export default function Feed() {
-  return (
-    <div className="feed-container">
+export default function Feed(props) {
+  const { feedDataList } = props;
+
+  const feeds = feedDataList.map(feed => (
+    <div key={feed.id} className="feed-container">
       <header className="feed-header">
         <div className="feed-header__image" />
-        <div className="feed-header__id">__hackney</div>
+        <div className="feed-header__id">{feed.postUser}</div>
         <button className="feed-header__button">•••</button>
       </header>
       <div className="feed-image">
         <div className="feed-image__upload">
-          <img alt="feed" src="/images/haesoo/feed_images/1.jpeg" />
+          <img alt="feed" src={feed.photo} />
         </div>
         <div className="feed-image__buttons">
           <p />
@@ -51,13 +53,14 @@ export default function Feed() {
         </div>
       </div>
       <div className="feed-information js-feed-container">
-        <div className="feed-likes">좋아요 170개</div>
+        <div className="feed-likes">좋아요 {feed.likeNum}개</div>
         <div className="feed-user">
-          <div className="feed-user__id">__hackney</div>
-          <div className="feed-user__text">안뇽 나는 인스타그램 클론중</div>
+          <div className="feed-user__id">{feed.postUser}</div>
+          <div className="feed-user__text">{feed.postComment}</div>
         </div>
       </div>
       <Comment />
     </div>
-  );
+  ));
+  return <div>{feeds}</div>;
 }
