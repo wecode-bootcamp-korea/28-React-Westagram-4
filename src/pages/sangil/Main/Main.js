@@ -36,7 +36,7 @@ function Main() {
                   <div className="profile_small_img">
                     <img src={Image} alt="프로필이미지" />
                   </div>
-                  <div className="detail">
+                  <div className="detail" key={RightList.id}>
                     <div className="id">{RightList.content}</div>
                     <div className="time">{RightList.time}</div>
                   </div>

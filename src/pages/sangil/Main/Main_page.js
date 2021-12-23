@@ -5,22 +5,22 @@ import '../Main/Main_page.scss';
 
 function MainPage() {
   const [Commentse, SetCommentse] = useState('');
-  const [Comment_Array, SetComment_Array] = useState([]);
-  const [Upload_Btn_Active, SetUpload_Btn_Active] = useState(false);
+  const [CommentArray, SetCommentArray] = useState([]);
+  const [UploadBtnActive, SetUploadBtnActive] = useState(false);
 
-  const Comment_Btn_Plus = e => {
-    const Comment_Arr = [...Comment_Array];
-    Comment_Arr.push(Commentse);
-    SetComment_Array(Comment_Arr);
+  const CommentBtnPlus = e => {
+    const CommentArr = [...CommentArray];
+    CommentArr.push(Commentse);
+    SetCommentArray(CommentArr);
   };
 
   return (
     <section id="main_container">
       <div className="Inner">
         <div className="Contents_Box">
-          <article className="contents">
+          <article className="Contents">
             <header className="contents_top">
-              <div className="user_container">
+              <div className="UserContainer">
                 <div className="profile_img">
                   <img src={Image} alt="프로필이미지" />
                 </div>
@@ -50,13 +50,13 @@ function MainPage() {
               <span className="likes_count">좋아요 2,222 개</span>
               <div className="timer">1시간 전</div>
             </div>
-            <div className="comment_container">
-              <div className="comment">
-                <div className="comment_detail">
+            <div className="CommentContainer">
+              <div className="Comment">
+                <div className="CommentDetail">
                   <p className="comment_text_test">댓글 테스트 진행중</p>
                 </div>
 
-                {Comment_Array.map((item, i) => {
+                {CommentArray.map((item, i) => {
                   return <ComponentComment item={item} key={i} />;
                 })}
               </div>
@@ -73,14 +73,14 @@ function MainPage() {
                 }}
                 onKeyUp={event =>
                   event.target.value.length > 0
-                    ? SetUpload_Btn_Active(true)
-                    : SetUpload_Btn_Active(false)
+                    ? SetUploadBtnActive(true)
+                    : SetUploadBtnActive(false)
                 }
               />
               <button
                 className="UploadBtn"
-                disabled={Upload_Btn_Active ? false : true}
-                onClick={Comment_Btn_Plus}
+                disabled={UploadBtnActive ? false : true}
+                onClick={CommentBtnPlus}
               >
                 게시
               </button>

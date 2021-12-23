@@ -10,7 +10,7 @@
     position: relative;
   }
 
-  .contents {
+  .Contents {
     position: absolute;
     left: 160px;
     width: 509px;
@@ -52,17 +52,17 @@
       font-size: small;
     }
 
-    .comment_container {
+    .CommentContainer {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 5px 20px;
 
-      .comment_detail {
+      .CommentDetail {
         display: flex;
       }
 
-      .comment {
+      .Comment {
         display: flex;
         font-size: 14px;
         flex-direction: column;
@@ -91,7 +91,7 @@
         }
       }
 
-      .user_container {
+      .UserContainer {
         display: flex;
       }
     }
