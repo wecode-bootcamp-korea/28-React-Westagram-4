@@ -59,7 +59,7 @@ function Login() {
   */
   return (
     <>
-      <div className="wrap">
+      <div className="login-wrap">
         <main className="login-container">
           <h1>westagram</h1>
           <form>

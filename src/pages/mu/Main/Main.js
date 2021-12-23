@@ -34,20 +34,16 @@ function Main() {
           </header>
           <nav>
             <div className="search">
-              <form className="search-form">
-                <input
-                  className="search-input"
-                  type="text"
-                  placeholder="검색"
-                />
-                <ul className="search-list" />
+              <form>
+                <input type="text" placeholder="검색" />
+                <ul />
               </form>
               <i>
                 <AiOutlineSearch />
               </i>
             </div>
             <div className="menu">
-              <div className="icon">
+              <div>
                 <i>
                   <AiOutlineCompass />
                 </i>
@@ -68,8 +64,8 @@ function Main() {
       <div className="main-wrap">
         <main className="main">
           <ul>
-            {feeds.map(fee => (
-              <Feeds key={fee.id} feed={fee} />
+            {feeds.map(feed => (
+              <Feeds key={feed.id} feed={feed} />
             ))}
           </ul>
         </main>

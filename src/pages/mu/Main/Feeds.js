@@ -13,9 +13,10 @@ function Feeds({ feed }) {
   const [comments, setComments] = useState([]);
   const [commentKey, setCommentKey] = useState(100);
   const [inputText, setInputText] = useState('');
+
   const commentSave = e => setInputText(e.target.value);
 
-  const commentAdd = () => {
+  const commentsUpdate = () => {
     const nextComment = {
       id: commentKey,
       userName: username,
@@ -24,6 +25,10 @@ function Feeds({ feed }) {
       isLiked: false,
     };
     setComments([...comments, nextComment]);
+  };
+
+  const commentAdd = () => {
+    commentsUpdate();
     setCommentKey(commentKey + 1);
     setUserName(username + 'c');
     setInputText('');
@@ -37,7 +42,7 @@ function Feeds({ feed }) {
     fetch('http://localhost:3000/data/feedComment.json')
       .then(res => res.json())
       .then(data => setComments(data.filter(commen => commen.feedId === id)));
-  });
+  }, []);
 
   return (
     <li>
@@ -90,14 +95,13 @@ function Feeds({ feed }) {
         </div>
         <div className="feed-comment-form">
           <input
-            id="comment-input"
             type="text"
             placeholder="댓글 달기..."
             value={inputText}
             onChange={commentSave}
             onKeyPress={inputKeyEnter}
           />
-          <button id="comment-button" type="button" onClick={commentAdd}>
+          <button type="button" onClick={commentAdd}>
             게시
           </button>
         </div>
