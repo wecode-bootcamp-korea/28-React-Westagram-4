@@ -1,132 +1,131 @@
 #main_container {
   position: absolute;
   top: 120px;
-  right: 230px;
-  display: flex;
+  right: 290px;
+
   justify-content: center;
   .Inner {
     width: 930px;
     height: 500px;
     position: relative;
   }
-}
 
-.contents {
-  position: absolute;
-  left: 160px;
-  width: 509px;
-  height: 650px;
-  border: 1px solid rgba(0, 0, 0, 0.09);
-  border-radius: 3px;
+  .contents {
+    position: absolute;
+    left: 160px;
+    width: 509px;
+    height: 650px;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    border-radius: 3px;
 
-  .sprite_more_icon {
-    display: block;
+    .sprite_more_icon {
+      display: block;
 
-    .toggle_box {
-      text-align: center;
-      position: absolute;
-      height: 0;
-      top: 20px;
-      border: 1px solid rgba(0, 0, 0, 0.09);
-      border-radius: 3px;
-      display: none;
+      .toggle_box {
+        text-align: center;
+        position: absolute;
+        height: 0;
+        top: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.09);
+        border-radius: 3px;
+        display: none;
 
-      > li {
-        input {
-          border: none;
-          font-size: inherit;
+        > li {
+          input {
+            border: none;
+            font-size: inherit;
+          }
         }
       }
     }
+
+    .bottom_icons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .likes {
+      padding: 1px 20px;
+      color: #262626;
+      font-size: small;
+    }
+
+    .comment_container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 20px;
+
+      .comment_detail {
+        display: flex;
+      }
+
+      .comment {
+        display: flex;
+        font-size: 14px;
+        flex-direction: column;
+
+        .nick_name {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .contents_top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+
+      .profile_img {
+        width: 50px;
+        height: 40px;
+        border-radius: 10%;
+        overflow: hidden;
+        margin-top: -7px;
+
+        .img {
+          width: 100%;
+        }
+      }
+
+      .user_container {
+        display: flex;
+      }
+    }
+
+    .comment_field {
+      min-height: 51px;
+      margin-top: 90px;
+      color: #999;
+
+      .comment_test {
+        width: 100%;
+        height: 39px;
+        border: none;
+        outline: none;
+        background: transparent;
+        margin-left: 13px;
+      }
+
+      .UploadBtn {
+        position: absolute;
+        right: 15px;
+        bottom: 40px;
+        color: #0095f6;
+      }
+    }
   }
 
-  .bottom_icons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+  .timer {
+    font-size: 10px;
+    letter-spacing: 0.2px;
+    color: #999;
   }
 
-  .likes {
-    padding: 1px 20px;
-    color: #262626;
+  .comment_text_test {
     font-size: small;
   }
-
-  .comment_container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 20px;
-
-    .comment_detail {
-      display: flex;
-    }
-
-    .comment {
-      display: flex;
-      font-size: 14px;
-      flex-direction: column;
-
-      .nick_name {
-        margin-right: 10px;
-      }
-    }
-  }
-
-  .contents_top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-
-    .profile_img {
-      width: 50px;
-      height: 40px;
-      border-radius: 10%;
-      overflow: hidden;
-      margin-top: -7px;
-
-      .img {
-        width: 100%;
-      }
-    }
-
-    .user_container {
-      display: flex;
-    }
-  }
-
-  .comment_field {
-    min-height: 51px;
-    margin-top: 90px;
-
-    color: #999;
-
-    .comment_test {
-      width: 100%;
-      height: 39px;
-      border: none;
-      outline: none;
-      background: transparent;
-      margin-left: 13px;
-    }
-
-    .Upload_Btn {
-      position: absolute;
-      right: 15px;
-      bottom: 40px;
-      color: #0095f6;
-    }
-  }
-}
-
-.timer {
-  font-size: 10px;
-  letter-spacing: 0.2px;
-  color: #999;
-}
-
-.comment_text_test {
-  font-size: small;
 }

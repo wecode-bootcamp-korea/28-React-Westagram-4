@@ -17,6 +17,9 @@ function Login() {
       ? SetLogin_Page_Btn_Active(true)
       : SetLogin_Page_Btn_Active(false);
   };
+  const LoginEnterTest = e => {
+    return Login_btn_active && e.key === 'Enter';
+  };
 
   return (
     <div>
@@ -46,16 +49,19 @@ function Login() {
             </p>
 
             <p>
-              <button
-                className={
-                  Login_Page_Btn_Active
-                    ? 'submit_btn_active'
-                    : 'submit_btn_unactive'
-                }
-                type="button"
-              >
-                로그인
-              </button>
+              <Link to="/main-sangil">
+                <button
+                  className={
+                    Login_Page_Btn_Active
+                      ? 'submit_btn_active'
+                      : 'submit_btn_unactive'
+                  }
+                  onKeyPress={LoginEnterTest}
+                  // type="button"
+                >
+                  로그인
+                </button>
+              </Link>
             </p>
             <div className="PasswordFind">
               <Link to="/main-sangil">

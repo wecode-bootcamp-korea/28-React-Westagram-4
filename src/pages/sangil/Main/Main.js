@@ -1,9 +1,10 @@
 // 항상 시작전에 git checkout feature/si 실시하고 확인할것
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Main_page from './Main_page';
+import MainPage from './Main_page';
 import Nav from './Nav';
 import { Component_Right_list } from './Component_Right_list';
+
 import Image from '../../../assets/images/profile_si.png';
 import '../Main/Main.scss';
 
@@ -11,7 +12,7 @@ function Main() {
   return (
     <div>
       <Nav />
-      <Main_page />
+      <MainPage />
       <div className="main_right">
         <div className="user_profile">
           <div className="profile_small_img">
@@ -19,7 +20,7 @@ function Main() {
           </div>
           <div className="detail">
             <div className="id m_text">Insta_React_test</div>
-            <div className="ko_name">CSS가 너무 싫다</div>
+            <div className="ko_name">비공개</div>
           </div>
         </div>
         <article className="story">
@@ -28,7 +29,7 @@ function Main() {
             <div className="more">모두 보기</div>
           </header>
 
-          {Component_Right_list.map(Test => {
+          {Component_Right_list.map(RightList => {
             return (
               <div className="scroll_inner">
                 <div className="scroll_userlist">
@@ -36,9 +37,12 @@ function Main() {
                     <img src={Image} alt="프로필이미지" />
                   </div>
                   <div className="detail">
-                    <div className="id">{Test.content}</div>
-                    <div className="time">{Test.time}</div>
+                    <div className="id">{RightList.content}</div>
+                    <div className="time">{RightList.time}</div>
                   </div>
+                  <Link to="/login-sangil">
+                    <div className="RightListFollow">팔로우</div>
+                  </Link>
                 </div>
               </div>
             );
