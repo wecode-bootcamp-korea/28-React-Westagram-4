@@ -1,4 +1,4 @@
-#main_container {
+#mainContainer {
   position: absolute;
   top: 120px;
   right: 290px;
@@ -18,28 +18,14 @@
     border: 1px solid rgba(0, 0, 0, 0.09);
     border-radius: 3px;
 
-    .sprite_more_icon {
-      display: block;
-
-      .toggle_box {
-        text-align: center;
-        position: absolute;
-        height: 0;
-        top: 20px;
-        border: 1px solid rgba(0, 0, 0, 0.09);
-        border-radius: 3px;
-        display: none;
-
-        > li {
-          input {
-            border: none;
-            font-size: inherit;
-          }
-        }
+    > li {
+      input {
+        border: none;
+        font-size: inherit;
       }
     }
 
-    .bottom_icons {
+    .bottomIcons {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -67,19 +53,19 @@
         font-size: 14px;
         flex-direction: column;
 
-        .nick_name {
+        .nickName {
           margin-right: 10px;
         }
       }
     }
 
-    .contents_top {
+    .contentsTop {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 10px 20px;
 
-      .profile_img {
+      .profileImg {
         width: 50px;
         height: 40px;
         border-radius: 10%;
@@ -91,17 +77,17 @@
         }
       }
 
-      .UserContainer {
+      .userContainer {
         display: flex;
       }
     }
 
-    .comment_field {
+    .commentField {
       min-height: 51px;
       margin-top: 90px;
       color: #999;
 
-      .comment_test {
+      .commentTest {
         width: 100%;
         height: 39px;
         border: none;
@@ -110,7 +96,7 @@
         margin-left: 13px;
       }
 
-      .UploadBtn {
+      .uploadBtn {
         position: absolute;
         right: 15px;
         bottom: 40px;
@@ -125,7 +111,7 @@
     color: #999;
   }
 
-  .comment_text_test {
+  .commentTextTest {
     font-size: small;
   }
 }

@@ -14,16 +14,18 @@ function Login() {
   const [loginPageBtnActive, setLoginPageBtnActive] = useState(false);
 
   const loginBtnActive = () => {
-    setLoginPageBtnActive(Id.includes('', '@', '.') && Pw.length > 7);
+    setLoginPageBtnActive(
+      Id.includes('', '@', '.') && Pw.length > 7 ? true : false
+    );
   };
 
   return (
     <div>
       <div id="main_container">
-        <div id="form_container">
+        <div id="formContainer">
           <form className="form">
             <h1 className="instaLogoTitle">Westagram</h1>
-            <p className="login_user_name">
+            <p className="loginUserName">
               <input
                 type="text"
                 className="inputIogin"
@@ -33,7 +35,8 @@ function Login() {
                 onKeyUp={loginBtnActive}
               />
             </p>
-            <p className="login_user_password">
+
+            <p className="loginUserPassword">
               <input
                 type="password"
                 className="inputIogin"
@@ -43,15 +46,12 @@ function Login() {
                 onKeyUp={loginBtnActive}
               />
             </p>
-
             <p>
               <Link to="/main-sangil">
                 <button
-                  className={
-                    loginPageBtnActive
-                      ? 'submit_btn_active'
-                      : 'submit_btn_unactive'
-                  }
+                  id="btnActiveCode" //2021-12-23 코드리뷰 지적사항 : 버튼 활성화시 중복된 css코드 처리할것 해결
+                  className={loginPageBtnActive ? 'btnActive' : 'btnUnactive'}
+                  disabled={loginPageBtnActive ? false : 'disabled'}
                 >
                   로그인
                 </button>

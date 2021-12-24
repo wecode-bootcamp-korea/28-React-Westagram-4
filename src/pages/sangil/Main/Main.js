@@ -13,27 +13,27 @@ function Main() {
     <div>
       <Nav />
       <MainPage />
-      <div className="main_right">
+      <div className="mainRight">
         <div className="UserProfile">
-          <div className="ProfileSmallImg">
+          <div className="profileSmallImg">
             <img src={Image} alt="프로필이미지" />
           </div>
           <div className="detail">
             <div className="id m_text">Insta_React_test</div>
-            <div className="KoName">비공개</div>
+            <div className="koName">비공개</div>
           </div>
         </div>
-        <article className="story">
-          <header className="story_header">
+        <article className="Story">
+          <header className="storyHeader">
             <p>스토리</p>
             <div className="more">모두 보기</div>
           </header>
 
           {ASIDESTORYLIST.map(RightList => {
             return (
-              <div className="scroll_inner">
-                <div className="scroll_userlist">
-                  <div className="ProfileSmallImg">
+              <div className="scrollInner">
+                <div className="scrollUserlist">
+                  <div className="profileSmallImg">
                     <img src={Image} alt="프로필이미지" />
                   </div>
                   <div className="detail" key={RightList.id}>
@@ -48,12 +48,12 @@ function Main() {
             );
           })}
         </article>
-        <article className="recommend">
-          <header className="reco_header">
+        <article className="Recommend">
+          <header className="recoHeader">
             <p>회원님을 위한 추천</p>
             <div className="more">모두 보기</div>
           </header>
-          <div className="scroll_userlist">
+          <div className="scrollUserlist">
             <div className="ProfileSmallImg">
               <img src={Image} alt="프로필이미지" />
             </div>

@@ -1,8 +1,8 @@
 .form {
   width: 310px;
   height: 380px;
-  top: -50px;
-  left: -650px;
+  top: 50px;
+  left: 450px;
   display: flex;
   position: absolute;
   flex-direction: column;
@@ -30,9 +30,7 @@
     border: 1px #8a8a8a;
   }
 }
-
-.submit_btn_active {
-  background: #0095f6;
+#btnActiveCode {
   color: #fff;
   width: 268px;
   height: 30px;
@@ -43,38 +41,12 @@
   text-align: center;
   font-weight: bold;
 }
+.btnActive {
+  background-color: #0095f6;
+}
 
-.submit_btn_unactive {
+.btnUnactive {
   background-color: #b2dffc;
-  color: #fff;
-  width: 268px;
-  height: 30px;
-  margin: 13px auto;
-  border: none;
-  border-radius: 3px;
-  font-size: 14px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.submit_btn {
-  &disabled {
-    background-color: #b9dffc;
-  }
-
-  &hover {
-    cursor: default;
-  }
-
-  &focus {
-    outline: none;
-  }
-
-  &enabled {
-    &hover {
-      cursor: default;
-    }
-  }
 }
 
 .instaLogoTitle {

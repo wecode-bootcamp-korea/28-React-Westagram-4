@@ -1,32 +1,32 @@
-.insta_icon {
+.instaIcon {
   display: inline-block;
   background: url('../../../assets/images/background01_si.png') no-repeat -53px -235px;
   width: 24px;
   height: 26px;
 }
 
-.write_logo {
+.writeLogo {
   display: inline-block;
   background: url('../../../assets/images/background01_si.png') no-repeat -94px -72px;
   width: 123px;
   height: 29px;
 }
 
-.CompassIcon {
+.compassIcon {
   display: inline-block;
   background: url('../../../assets/images/explore_si.png') no-repeat;
   width: 70px;
   height: 51px;
 }
 
-.HeartIconOutline {
+.heartIconOutline {
   display: inline-block;
   background: url('../../../assets/images/heart_si.png') no-repeat;
   width: 70px;
   height: 51px;
 }
 
-.UserIconProfile {
+.userIconProfile {
   display: inline-block;
   background: url('../../../assets/images/profile_si.png') no-repeat;
 
@@ -34,7 +34,7 @@
   height: 51px;
 }
 
-.SmallSearchIcon {
+.smallSearchIcon {
   display: inline-block;
   background: url('../../../assets/images/background01_si.png') no-repeat -337px -246px;
   width: 10px;
@@ -57,7 +57,7 @@
     transition: all 1s;
   }
   .Logo {
-    .insta_icon {
+    .instaIcon {
       position: relative;
       margin-right: 30px;
       &:after {
@@ -72,10 +72,10 @@
       }
     }
   }
-  #ScarchBox {
+  #scarchBox {
     position: relative;
   }
-  #SearchField {
+  #searchField {
     width: 185px;
     height: 28px;
     background: #fafafa;
@@ -96,7 +96,7 @@
       font-size: 0;
     }
   }
-  .SearchFieldSmall {
+  .searchFieldSmall {
     position: absolute;
     left: 43%;
     top: 50%;

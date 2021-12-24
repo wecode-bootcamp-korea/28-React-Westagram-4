@@ -8,19 +8,19 @@ function Nav() {
       <header id="Nav">
         <section className="Inner">
           <h1 className="Logo">
-            <div className="insta_icon" />
-            <div className="write_logo" />
+            <div className="instaIcon" />
+            <div className="writeLogo" />
           </h1>
-          <div class="SearchBox">
-            <input type="text" placeholder="검색" id="SearchField" />
-            <div className="SearchFieldSmall">
-              <span className="SmallSearchIcon" />
+          <div class="searchBox">
+            <input type="text" placeholder="검색" id="searchField" />
+            <div className="searchFieldSmall">
+              <span className="smallSearchIcon" />
             </div>
           </div>
-          <div className="right_icons">
-            <div className="CompassIcon" />
-            <div className="HeartIconOutline" />
-            <div className="UserIconProfile" />
+          <div className="rightIcons">
+            <div className="compassIcon" />
+            <div className="heartIconOutline" />
+            <div className="userIconProfile" />
           </div>
         </section>
       </header>
