@@ -27,6 +27,7 @@ function Login() {
     if (event.key === 'Enter') return fetchData();
   };
 
+  // Backend와 통신
   const fetchData = () => {
     // fetch(BASE_URL, {
     //   method: 'POST',
