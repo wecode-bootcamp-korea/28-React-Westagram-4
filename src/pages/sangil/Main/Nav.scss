@@ -1,0 +1,106 @@
+.instaIcon {
+  display: inline-block;
+  background: url('../../../assets/images/background01_si.png') no-repeat -53px -235px;
+  width: 24px;
+  height: 26px;
+}
+
+.writeLogo {
+  display: inline-block;
+  background: url('../../../assets/images/background01_si.png') no-repeat -94px -72px;
+  width: 123px;
+  height: 29px;
+}
+
+.compassIcon {
+  display: inline-block;
+  background: url('../../../assets/images/explore_si.png') no-repeat;
+  width: 70px;
+  height: 51px;
+}
+
+.heartIconOutline {
+  display: inline-block;
+  background: url('../../../assets/images/heart_si.png') no-repeat;
+  width: 70px;
+  height: 51px;
+}
+
+.userIconProfile {
+  display: inline-block;
+  background: url('../../../assets/images/profile_si.png') no-repeat;
+
+  width: 70px;
+  height: 51px;
+}
+
+.smallSearchIcon {
+  display: inline-block;
+  background: url('../../../assets/images/background01_si.png') no-repeat -337px -246px;
+  width: 10px;
+  height: 10px;
+}
+
+#Nav {
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  .Inner {
+    width: 975px;
+    height: 77px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s;
+  }
+  .Logo {
+    .instaIcon {
+      position: relative;
+      margin-right: 30px;
+      &:after {
+        content: '';
+        width: 2px;
+        height: 28px;
+        background: #000;
+        position: absolute;
+        right: -15px;
+        top: -4px;
+        transition: all 0.5s;
+      }
+    }
+  }
+  #scarchBox {
+    position: relative;
+  }
+  #searchField {
+    width: 185px;
+    height: 28px;
+    background: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    padding: 3px 30px;
+    color: #999;
+    font-weight: 400;
+    text-align: left;
+    font-size: 14px;
+    outline: none;
+    &:focus {
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+    &::placeholder {
+      font-size: 0;
+    }
+  }
+  .searchFieldSmall {
+    position: absolute;
+    left: 43%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,87 @@
+.form {
+  width: 310px;
+  height: 380px;
+  top: 50px;
+  left: 450px;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+
+  input {
+    width: 100%;
+    border: 1px solid #efefef;
+    border-radius: 5px;
+    color: #262626;
+    font-size: 14px;
+    padding: 7px 8px 7px;
+  }
+
+  p {
+    margin-bottom: 6px;
+  }
+}
+
+.inputIogin {
+  &:placeholder {
+    border: 1px #8a8a8a;
+  }
+}
+#btnActiveCode {
+  color: #fff;
+  width: 268px;
+  height: 30px;
+  margin: 13px auto;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+}
+.btnActive {
+  background-color: #0095f6;
+}
+
+.btnUnactive {
+  background-color: #b2dffc;
+}
+
+.instaLogoTitle {
+  font-family: 'Lobster';
+  display: inline-block;
+  align-self: center;
+  width: 245px;
+  height: 51px;
+  margin: 45px 0;
+  font-size: 55px;
+}
+
+.passwordFind {
+  color: #00366b;
+  font-size: 12px;
+  margin-top: 25px;
+  margin-left: 81px;
+}
+
+a:visited {
+  color: #00366b;
+}
+
+a:link {
+  text-decoration-line: none;
+}
+
+.instaJoin {
+  font-size: 15px;
+  text-align: center;
+  width: 310px;
+  height: 60px;
+  margin: 0px auto;
+  position: absolute;
+  top: 460px;
+  left: 453px;
+  background-color: #fff;
+}
