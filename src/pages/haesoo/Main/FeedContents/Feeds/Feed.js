@@ -1,5 +1,5 @@
 import React from 'react';
-import Comment from './Comment/Comment';
+import Comment from '../components/Comment';
 import './Feed.scss';
 
 export default function Feed(props) {
@@ -24,19 +24,19 @@ export default function Feed(props) {
       </div>
       <div className="feed-icons">
         <div className="feed-icons__left">
-          <button>
+          <button type="button">
             <img
               alt="like icon"
               src="/images/haesoo/navigation_icons/like.png"
             />
           </button>
-          <button>
+          <button type="button">
             <img
               alt="comment icon"
               src="/images/haesoo/content_icons/chat.png"
             />
           </button>
-          <button>
+          <button type="button">
             <img
               alt="direct message"
               src="/images/haesoo/content_icons/navigation.png"
@@ -44,7 +44,7 @@ export default function Feed(props) {
           </button>
         </div>
         <div className="feed-icons__right">
-          <button>
+          <button type="button">
             <img
               alt="feed save icon"
               src="/images/haesoo/content_icons/save-instagram.png"

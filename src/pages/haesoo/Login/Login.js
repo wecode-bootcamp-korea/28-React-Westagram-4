@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Footer from '../../../components/Footer/Footer';
 import './Login.scss';
 
-const BASE_URL = 'http://10.58.6.234:8000/users/login';
+// const BASE_URL = 'http://10.58.6.234:8000/users/login';
 
 function Login() {
   const [input, setInput] = useState({
@@ -29,6 +29,7 @@ function Login() {
 
   // Backend와 통신
   const fetchData = () => {
+    // const { id, password } = setInput;
     // fetch(BASE_URL, {
     //   method: 'POST',
     //   body: JSON.stringify({

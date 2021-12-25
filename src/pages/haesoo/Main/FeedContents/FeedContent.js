@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import Aside from '../Aside/Aside';
 import StoryFeed from './StoryFeed/StoryFeed';
-import Feed from './Feed/Feed';
+import Feed from './Feeds/Feed';
+
+const BASE_URL = 'http://localhost:3000/data/haesoo';
 
 function MainLeft() {
   const [storyData, setStoryData] = useState([]);
   const [feedDataList, setFeedDataList] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/data/haesoo/storyData.json', {
+    fetch(`${BASE_URL}/storyData.json`, {
       method: 'GET',
     })
       .then(res => res.json())
@@ -18,7 +20,7 @@ function MainLeft() {
   }, []);
 
   useEffect(() => {
-    fetch('http://localhost:3001/data/haesoo/feedData.json', {
+    fetch(`${BASE_URL}/feedData.json`, {
       method: 'GET',
     })
       .then(res => res.json())
@@ -28,7 +30,7 @@ function MainLeft() {
   }, []);
 
   return (
-    <main className="main-left">
+    <main className="main-left-haesoo">
       <section className="contents-container">
         <StoryFeed storyDataList={storyData} />
         <Feed feedDataList={feedDataList} />

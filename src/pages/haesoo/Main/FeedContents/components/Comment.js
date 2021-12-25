@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import AddComment from './AddComment/AddComment';
-import '../Comment/Comment.scss';
+import React, { useState } from 'react';
+import AddComment from './AddComment';
+import './Comment.scss';
 
 export default function Comment(props) {
   const { commentDataList } = props;

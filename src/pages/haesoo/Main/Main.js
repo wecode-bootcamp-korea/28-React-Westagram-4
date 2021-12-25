@@ -1,13 +1,13 @@
 import React from 'react';
-import MainLeft from './MainLeft/MainLeft';
+import MainLeft from './FeedContents/FeedContent';
 import './Main.scss';
-import './MainLeft/MainLeft.scss';
+import './FeedContents/FeedContent.scss';
 import './Aside/Aside.scss';
 
 function Main() {
   return (
     <div className="main-haesoo">
-      <nav className="navigation">
+      <nav className="navigation-haesoo">
         <p>Westagram</p>
         <div className="js-navigation navigation__search">
           <input className="js-search-input" placeholder="검색" />
