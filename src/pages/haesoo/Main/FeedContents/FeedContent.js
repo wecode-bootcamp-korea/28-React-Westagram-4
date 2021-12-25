@@ -5,7 +5,7 @@ import Feed from './Feeds/Feed';
 
 const BASE_URL = 'http://localhost:3000/data/haesoo';
 
-function MainLeft() {
+function FeedContents() {
   const [storyData, setStoryData] = useState([]);
   const [feedDataList, setFeedDataList] = useState([]);
 
@@ -30,7 +30,7 @@ function MainLeft() {
   }, []);
 
   return (
-    <main className="main-left-haesoo">
+    <main className="main-container">
       <section className="contents-container">
         <StoryFeed storyDataList={storyData} />
         <Feed feedDataList={feedDataList} />
@@ -40,4 +40,4 @@ function MainLeft() {
   );
 }
 
-export default MainLeft;
+export default FeedContents;

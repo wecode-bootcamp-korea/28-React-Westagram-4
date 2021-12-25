@@ -1,4 +1,4 @@
-.feed-container {
+.feed {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -7,7 +7,7 @@
   border: 1px solid #dbdbdb;
   border-radius: 4px;
 
-  .feed-header {
+  &-header {
     position: relative;
     display: flex;
     align-items: center;
@@ -38,14 +38,14 @@
     }
   }
 
-  .feed-image {
+  &-image {
     width: 100%;
-    height: 780px;
+    height: auto;
 
     &__upload {
       img {
         width: 100%;
-        height: 100%;
+        height: auto;
       }
     }
 
@@ -67,7 +67,7 @@
     }
   }
 
-  .feed-icons {
+  &-icons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,20 +99,20 @@
     }
   }
 
-  .feed-information {
+  &-information {
     display: flex;
     flex-direction: column;
     width: 100%;
     padding: 10px 20px;
 
-    .feed-likes {
+    .likes {
       width: 100%;
       font-size: 14px;
       font-weight: 600;
       margin-bottom: 20px;
     }
 
-    .feed-user {
+    .user {
       display: flex;
       align-items: center;
 

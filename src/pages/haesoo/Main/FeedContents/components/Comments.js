@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import AddComment from './AddComment';
-import './Comment.scss';
+import './Comments.scss';
 
 export default function Comment(props) {
   const { commentDataList } = props;
@@ -27,13 +27,9 @@ export default function Comment(props) {
 
   return (
     <>
-      <AddComment
-        className="feed-comment__add"
-        comments={comments}
-        commentDataList={commentDataList}
-      />
-      <div className="feed-comment">
-        <form onSubmit={handleSubmit} className="feed-comment__left">
+      <AddComment comments={comments} commentDataList={commentDataList} />
+      <div className="comments-haesoo">
+        <form onSubmit={handleSubmit} className="input-wrapper">
           <i className="far fa-smile" />
           <input
             onChange={handleChange}

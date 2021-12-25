@@ -5,7 +5,7 @@ export default function StoryFeed(props) {
   const { storyDataList } = props;
 
   const stories = storyDataList.map(story => (
-    <div key={story.id} className="story-container__contents">
+    <div key={story.id} className="story">
       <div className="story__image">
         <img alt={story.alt} src={story.src} />
       </div>
@@ -13,5 +13,5 @@ export default function StoryFeed(props) {
     </div>
   ));
 
-  return <div className="story-container-haesoo">{stories}</div>;
+  return <div className="stories">{stories}</div>;
 }

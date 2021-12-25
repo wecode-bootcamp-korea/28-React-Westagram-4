@@ -12,14 +12,14 @@ export default function AddComment({ comments, commentDataList }) {
   }
 
   const commentsUI = commentList.map(comment => (
-    <div key={comment.id} className="comment-wrapper">
+    <div key={comment.id} className="comment">
       <span className="comment-id">{comment.userName}</span>
       <span className="comment-text">{comment.content}</span>
-      <button className="delete-button" type="button">
+      <button className="comment-delete" type="button">
         X
       </button>
     </div>
   ));
 
-  return <div className="feed-comment__add">{commentsUI}</div>;
+  return <div className="comment-wrapper">{commentsUI}</div>;
 }

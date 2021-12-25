@@ -1,4 +1,4 @@
-.story-container-haesoo {
+.stories {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,14 +9,14 @@
   border: 1px solid #dbdbdb;
   border-radius: 4px;
 
-  .story-container__contents {
+  .story {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 70px;
 
-    .story__image {
+    &__image {
       width: 50px;
       margin-bottom: 4px;
 
@@ -26,11 +26,12 @@
         border-radius: 50%;
       }
     }
-  }
-  .story__id {
-    width: 100%;
-    padding: 3px 0px;
-    font-size: 13px;
-    text-align: center;
+
+    &__id {
+      width: 100%;
+      padding: 3px 0px;
+      font-size: 13px;
+      text-align: center;
+    }
   }
 }

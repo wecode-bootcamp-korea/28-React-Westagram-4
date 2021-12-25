@@ -24,7 +24,7 @@ function Login() {
   };
 
   const handleEnter = event => {
-    if (event.key === 'Enter') return fetchData();
+    if (isFormValid && event.key === 'Enter') return fetchData();
   };
 
   // Backend와 통신
@@ -62,6 +62,7 @@ function Login() {
             name="id"
             type="input"
             placeholder="  전화번호, 사용자 이름 또는 이메일"
+            required="false"
           />
           <input
             className="login-form__password"
@@ -80,9 +81,7 @@ function Login() {
         </form>
         <p>또는</p>
         <button className="facebook-button">Facebook으로 로그인</button>
-        <section className="find-password-container">
-          <p>비밀번호를 잊으셨나요?</p>
-        </section>
+        <div className="find-password">비밀번호를 잊으셨나요?</div>
       </section>
       <section className="sign-container">
         <p>계정이 없으신가요?</p>

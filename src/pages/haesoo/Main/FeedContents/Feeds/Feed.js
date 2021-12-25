@@ -1,12 +1,12 @@
 import React from 'react';
-import Comment from '../components/Comment';
+import Comment from '../components/Comments';
 import './Feed.scss';
 
 export default function Feed(props) {
   const { feedDataList } = props;
 
   const feeds = feedDataList.map(feed => (
-    <div key={feed.id} className="feed-container">
+    <div key={feed.id} className="feed">
       <header className="feed-header">
         <div className="feed-header__image" />
         <div className="feed-header__id">{feed.postUser}</div>
@@ -52,15 +52,15 @@ export default function Feed(props) {
           </button>
         </div>
       </div>
-      <div className="feed-information js-feed-container">
-        <div className="feed-likes">좋아요 {feed.likeNum}개</div>
-        <div className="feed-user">
-          <div className="feed-user__id">{feed.postUser}</div>
-          <div className="feed-user__text">{feed.postComment}</div>
+      <div className="feed-information">
+        <div className="likes">좋아요 {feed.likeNum}개</div>
+        <div className="user">
+          <div className="user__id">{feed.postUser}</div>
+          <div className="user__text">{feed.postComment}</div>
         </div>
       </div>
       <Comment commentDataList={feed.commentList} />
     </div>
   ));
-  return <div>{feeds}</div>;
+  return <div className="feeds">{feeds}</div>;
 }

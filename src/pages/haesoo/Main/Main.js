@@ -1,5 +1,5 @@
 import React from 'react';
-import MainLeft from './FeedContents/FeedContent';
+import FeedContents from './FeedContents/FeedContent';
 import './Main.scss';
 import './FeedContents/FeedContent.scss';
 import './Aside/Aside.scss';
@@ -7,9 +7,9 @@ import './Aside/Aside.scss';
 function Main() {
   return (
     <div className="main-haesoo">
-      <nav className="navigation-haesoo">
+      <nav className="navigation">
         <p>Westagram</p>
-        <div className="js-navigation navigation__search">
+        <div className="navigation__search">
           <input className="js-search-input" placeholder="검색" />
         </div>
         <div className="navigation__icons">
@@ -40,7 +40,7 @@ function Main() {
           />
         </div>
       </nav>
-      <MainLeft />
+      <FeedContents />
     </div>
   );
 }
