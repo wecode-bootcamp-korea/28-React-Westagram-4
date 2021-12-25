@@ -1,21 +1,19 @@
 import React from 'react';
 import '../Main.scss';
 
+const TAG_LIST = [
+  { id: '1', content: '소개 ・ ' },
+  { id: '2', content: '도움말 ・ ' },
+  { id: '3', content: '홍보 ・ ' },
+  { id: '4', content: '개인정보처리방침 ・ ' },
+  { id: '5', content: '약관 ・ ' },
+  { id: '6', content: '위치 ・ ' },
+  { id: '7', content: '인기 ・ ' },
+  { id: '8', content: '계정 ・ ' },
+  { id: '9', content: '해시태그 ・ ' },
+];
+
 export default function Aside() {
-  const tagList = [
-    { id: '1', content: '소개 ・ ' },
-    { id: '2', content: '도움말 ・ ' },
-    { id: '3', content: '홍보 ・ ' },
-    { id: '4', content: '개인정보처리방침 ・ ' },
-    { id: '5', content: '약관 ・ ' },
-    { id: '6', content: '위치 ・ ' },
-    { id: '7', content: '인기 ・ ' },
-    { id: '8', content: '계정 ・ ' },
-    { id: '9', content: '해시태그 ・ ' },
-  ];
-
-  const tags = tagList.map(tag => <span key={tag.id}>{tag.content}</span>);
-
   return (
     <section className="aside-haesoo">
       <aside className="user-container">
@@ -103,7 +101,11 @@ export default function Aside() {
           </div>
         </div>
         <footer className="main-footer">
-          <div className="footer-tags">{tags}</div>
+          <div className="footer-tags">
+            {TAG_LIST.map(tag => (
+              <span key={tag.id}>{tag.content}</span>
+            ))}
+          </div>
           <div className="footer-copyright">© 2021 INSTAGRAM FROM META</div>
         </footer>
       </aside>
