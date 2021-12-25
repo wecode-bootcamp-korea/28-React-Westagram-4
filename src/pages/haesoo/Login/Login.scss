@@ -29,19 +29,15 @@
     }
 
     .login-form {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      padding: 20px 0px;
+      width: 300px;
+      padding: 20px 20px;
 
       input {
         &:focus {
           outline: none;
         }
         all: unset;
-        width: 90%;
+        width: 258px;
         height: 32px;
         margin-bottom: 4px;
         border: 1px solid #dbdbdb;
@@ -55,7 +51,7 @@
           opacity: 0.3;
         }
 
-        width: 90%;
+        width: 100%;
         height: 32px;
         margin-top: 10px;
         padding: 0;
@@ -71,7 +67,6 @@
     }
 
     p {
-      width: 100%;
       padding: 10px 0px;
       color: #8d8d8d;
       font-size: 14px;

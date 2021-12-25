@@ -10,7 +10,7 @@ function Main() {
       <nav className="navigation">
         <p>Westagram</p>
         <div className="navigation__search">
-          <input className="js-search-input" placeholder="검색" />
+          <input placeholder="검색" />
         </div>
         <div className="navigation__icons">
           <img
