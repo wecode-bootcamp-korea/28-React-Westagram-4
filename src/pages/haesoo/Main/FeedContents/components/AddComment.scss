@@ -1,0 +1,35 @@
+.comment-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .comment {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 0px 20px;
+    margin-bottom: 10px;
+
+    &-id {
+      width: auto;
+      margin-right: 10px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    &-text {
+      width: auto;
+    }
+
+    &-delete {
+      position: absolute;
+      right: 25px;
+      cursor: pointer;
+      opacity: 0.3;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
